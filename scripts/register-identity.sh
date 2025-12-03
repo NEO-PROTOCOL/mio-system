@@ -15,7 +15,7 @@ if [ -z "$TYPE" ] || [ -z "$NAME" ] || [ -z "$PLATFORM" ]; then
     exit 1
 fi
 
-BASE_DIR="infra/identities"
+BASE_DIR="identities"
 TARGET_DIR="$BASE_DIR/$PLATFORM"
 
 # Criar diretório se não existir

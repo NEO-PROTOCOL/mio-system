@@ -2,7 +2,7 @@
 
 # Script para listar todas as identidades registradas
 
-BASE_DIR="infra/identities"
+BASE_DIR="identities"
 
 echo "📊 Catálogo de Identidades Operacionais"
 echo "========================================"
