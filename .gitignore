@@ -1,0 +1,12 @@
+# Arquivos sensíveis
+*.key
+*.pem
+*.env
+*secrets*
+*token*
+*_private*
+
+# Sistema
+.DS_Store
+node_modules/
+*.log

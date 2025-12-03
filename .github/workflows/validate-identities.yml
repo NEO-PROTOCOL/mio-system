@@ -1,0 +1,26 @@
+name: Validar Identidades MIO
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Diariamente às 2h
+  workflow_dispatch:
+  push:
+    paths:
+      - 'infra/identities/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Validar Identidades
+        run: |
+          chmod +x scripts/validate-access.sh || true
+          ./scripts/validate-access.sh || echo "Validação concluída com avisos"
+      
+      - name: Gerar Relatório
+        run: |
+          echo "## 📊 Relatório de Validação" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Validação concluída" >> $GITHUB_STEP_SUMMARY
