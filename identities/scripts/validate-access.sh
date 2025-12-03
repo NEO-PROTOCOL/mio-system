@@ -6,7 +6,7 @@
 set -e
 
 VERBOSE=${1:-""}
-BASE_DIR="infra/identities"
+BASE_DIR="identities"
 VALIDATED=0
 FAILED=0
 SKIPPED=0
