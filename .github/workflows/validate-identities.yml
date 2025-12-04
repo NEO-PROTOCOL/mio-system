@@ -18,7 +18,10 @@ jobs:
         run: |
           chmod +x identities/scripts/validate-access.sh || true
           chmod +x scripts/*.sh || true
-          ./identities/scripts/validate-access.sh || echo "Validação concluída com avisos"
+          # No CI, GitHub CLI e Railway CLI não estão disponíveis
+          # Então pulamos validações que requerem autenticação
+          ./identities/scripts/validate-access.sh --skip-ssh || echo "Validação concluída com avisos"
+        continue-on-error: true
       
       - name: Gerar Relatório
         run: |
