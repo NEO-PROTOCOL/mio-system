@@ -3,7 +3,8 @@
 > **Painel de Inteligência Operativa** - Visão dinâmica do ecossistema de agentes e plataformas
 
 **Última atualização:** 2025-12-03  
-**Status geral:** 🟢 Operacional
+**Status geral:** 🟢 Operacional  
+**Migração concluída:** ✅ Todas identidades do flowcloser migradas e validadas
 
 ---
 
@@ -14,7 +15,9 @@
 | **Plataformas** | 2 | 2 | 0 | 3 |
 | **Agentes IA** | 1 | 1 | 0 | 2 |
 | **Deploy Keys** | 1 | 1 | 0 | 2 |
-| **Total** | 4 | 4 | 0 | 7 |
+| **Total** | 4 | 3 | 0 | 7 |
+
+> **Nota:** 3 identidades ativas migradas do projeto flowcloser e validadas em 2025-12-03
 
 ---
 
@@ -208,4 +211,25 @@ graph TD
 ---
 
 **Nota:** Este mapa é atualizado dinamicamente conforme novas identidades são adicionadas ao sistema.
+
+---
+
+## 📦 Histórico de Migração
+
+### Migração Inicial (2025-12-03)
+
+**Projeto origem:** `flowcloser-agent`  
+**Repositório destino:** `mio-system`
+
+**Identidades migradas:**
+- ✅ **flowcloser-deploy** (GitHub Deploy Key) - Migrada e validada
+- ✅ **railway-production** (Railway Deploy) - Migrada e validada  
+- ✅ **cursor-github** (Cursor AI) - Migrada e validada
+
+**Validação:**
+- GitHub CLI: ✅ Autenticado
+- Railway CLI: ✅ Autenticado
+- SSH: ⏭️ Validação pulada (passphrase não disponível)
+
+**Status:** Todas identidades migradas com sucesso e documentadas no novo repositório dedicado.
 
