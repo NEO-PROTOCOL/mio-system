@@ -3,7 +3,7 @@
 # Script para validar acesso de todas as identidades registradas
 # Uso: ./scripts/validate-access.sh [--verbose] [--skip-ssh]
 
-set -e
+# Não usar set -e para permitir tratamento de erros manual
 
 VERBOSE=${1:-""}
 SKIP_SSH=false
