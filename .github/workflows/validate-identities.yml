@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'infra/identities/**'
+      - 'identities/**'
 
 jobs:
   validate:
@@ -16,8 +16,9 @@ jobs:
       
       - name: Validar Identidades
         run: |
-          chmod +x scripts/validate-access.sh || true
-          ./scripts/validate-access.sh || echo "Validação concluída com avisos"
+          chmod +x identities/scripts/validate-access.sh || true
+          chmod +x scripts/*.sh || true
+          ./identities/scripts/validate-access.sh || echo "Validação concluída com avisos"
       
       - name: Gerar Relatório
         run: |
