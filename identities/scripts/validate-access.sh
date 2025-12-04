@@ -16,21 +16,15 @@ for arg in "$@"; do
 done
 
 BASE_DIR="identities"
+
 echo "🔍 Validação de Acesso - Sistema MIO"
 echo "===================================="
 echo ""
 
-# Contadores (usar arquivo temporário para funcionar em subshell)
-TEMP_FILE=$(mktemp)
-echo "0" > "$TEMP_FILE.validated"
-echo "0" > "$TEMP_FILE.failed"
-echo "0" > "$TEMP_FILE.skipped"
-
-increment_counter() {
-    local counter_file="$TEMP_FILE.$1"
-    local current=$(cat "$counter_file")
-    echo $((current + 1)) > "$counter_file"
-}
+# Contadores
+VALIDATED=0
+FAILED=0
+SKIPPED=0
 
 # Função para validar GitHub SSH
 validate_github_ssh() {
@@ -101,8 +95,14 @@ validate_railway() {
     fi
 }
 
+# Coletar arquivos em array (evita subshell)
+IDENTITY_FILES=()
+while IFS= read -r -d '' file; do
+    IDENTITY_FILES+=("$file")
+done < <(find "$BASE_DIR" -name "*.md" -type f ! -name "README.md" ! -name "CATALOGO.md" ! -name "MAPA_MIO.md" ! -name "TEMPLATE_AGENTE.md" ! -name "SISTEMA_MIO.md" ! -name "SETUP_NOVO_REPO.md" ! -name "QUICK_START.md" ! -name "GUIA_INTERFACE_GITHUB.md" ! -name "COMO_LIDAR_PASSPHRASE.md" -print0)
+
 # Processar cada arquivo de identidade
-find "$BASE_DIR" -name "*.md" -type f ! -name "README.md" ! -name "CATALOGO.md" ! -name "MAPA_MIO.md" ! -name "TEMPLATE_AGENTE.md" ! -name "SISTEMA_MIO.md" ! -name "SETUP_NOVO_REPO.md" ! -name "QUICK_START.md" ! -name "GUIA_INTERFACE_GITHUB.md" | while read -r file; do
+for file in "${IDENTITY_FILES[@]}"; do
     rel_path="${file#$BASE_DIR/}"
     name=$(basename "$file" .md)
     
@@ -115,40 +115,40 @@ find "$BASE_DIR" -name "*.md" -type f ! -name "README.md" ! -name "CATALOGO.md" 
         validate_github_ssh "$file" "github.com-kauntdewn1"
         result=$?
         case $result in
-            0) increment_counter "validated" ;;
-            1) increment_counter "failed" ;;
-            2) increment_counter "skipped" ;;
+            0) ((VALIDATED++)) ;;
+            1) ((FAILED++)) ;;
+            2) ((SKIPPED++)) ;;
         esac
     elif [[ "$rel_path" == *"github/personal-tokens"* ]]; then
         # Validar GitHub CLI
         validate_github_cli
         result=$?
         case $result in
-            0) increment_counter "validated" ;;
-            1) increment_counter "failed" ;;
-            2) increment_counter "skipped" ;;
+            0) ((VALIDATED++)) ;;
+            1) ((FAILED++)) ;;
+            2) ((SKIPPED++)) ;;
         esac
     elif [[ "$rel_path" == *"railway"* ]]; then
         # Validar Railway
         validate_railway
         result=$?
         case $result in
-            0) increment_counter "validated" ;;
-            1) increment_counter "failed" ;;
-            2) increment_counter "skipped" ;;
+            0) ((VALIDATED++)) ;;
+            1) ((FAILED++)) ;;
+            2) ((SKIPPED++)) ;;
         esac
     elif [[ "$rel_path" == *"agents/cursor"* ]]; then
         # Cursor usa GitHub, validar GitHub CLI
         validate_github_cli
         result=$?
         case $result in
-            0) increment_counter "validated" ;;
-            1) increment_counter "failed" ;;
-            2) increment_counter "skipped" ;;
+            0) ((VALIDATED++)) ;;
+            1) ((FAILED++)) ;;
+            2) ((SKIPPED++)) ;;
         esac
     else
         echo "    ⏭️  Tipo não suportado para validação automática"
-        increment_counter "skipped"
+        ((SKIPPED++))
     fi
     
     echo ""
@@ -156,23 +156,19 @@ done
 
 echo "===================================="
 echo "📊 Resumo da Validação"
-
-VALIDATED=$(cat "$TEMP_FILE.validated")
-FAILED=$(cat "$TEMP_FILE.failed")
-SKIPPED=$(cat "$TEMP_FILE.skipped")
-
 echo "   ✅ Validadas: $VALIDATED"
 echo "   ❌ Falhas: $FAILED"
 echo "   ⏭️  Puladas: $SKIPPED"
 echo ""
 
-# Limpar arquivos temporários
-rm -f "$TEMP_FILE"*
-
 if [ $FAILED -gt 0 ]; then
     echo "⚠️  Algumas validações falharam. Revise as identidades acima."
     exit 1
 else
-    echo "✅ Todas as validações passaram!"
+    if [ $VALIDATED -gt 0 ]; then
+        echo "✅ Validações concluídas com sucesso!"
+    else
+        echo "ℹ️  Nenhuma validação executada (todas puladas ou não suportadas)"
+    fi
     exit 0
 fi
