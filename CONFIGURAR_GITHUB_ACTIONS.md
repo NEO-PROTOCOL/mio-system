@@ -79,6 +79,7 @@ gh run view --log
 ### Problema 1: Workflow não aparece
 
 **Solução:**
+
 - Verifique se o arquivo está em `.github/workflows/validate-identities.yml`
 - Verifique se está commitado e pushado
 - Aguarde alguns segundos (GitHub pode demorar para detectar)
@@ -86,12 +87,14 @@ gh run view --log
 ### Problema 2: Script não encontrado
 
 **Solução:**
+
 - Verifique se `identities/scripts/validate-access.sh` existe
 - Verifique permissões: `chmod +x identities/scripts/validate-access.sh`
 
 ### Problema 3: Validação falha
 
 **Solução:**
+
 - O workflow usa `--skip-ssh` automaticamente (não precisa SSH)
 - Verifique se GitHub CLI e Railway CLI estão disponíveis no runner
 - Veja os logs detalhados no GitHub Actions
@@ -123,6 +126,7 @@ O workflow já está configurado para executar:
 ## 📝 Próximo Passo
 
 Após testar o workflow, você pode:
+
 1. Marcar na Issue #1: `☑️ Configurar GitHub Actions`
 2. Adicionar comentário: "✅ GitHub Actions configurado e testado"
 
