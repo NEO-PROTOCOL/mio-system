@@ -35,7 +35,7 @@ if [ -f "$DOC_FILE" ]; then
 fi
 
 cat > "$DOC_FILE" << EOF
-# 🔑 ${TYPE^}: ${NAME}
+# 🔑 ${TYPE}: ${NAME}
 
 ## 📋 Metadados
 
