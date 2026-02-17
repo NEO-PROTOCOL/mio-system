@@ -23,7 +23,7 @@
 
 ### Arquitetura
 - **Camada:** Valor & Token (NEØ Protocol)
-- **Repo:** https://github.com/neomello/flowpay
+- **Repo:** https://github.com/NEO-PROTOCOL/flowpay
 - **Local:** `/Users/nettomello/CODIGOS/flowpay/`
 - **URL:** https://flowpaypix.netlify.app
 

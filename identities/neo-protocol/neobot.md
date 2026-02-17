@@ -24,7 +24,7 @@
 
 ### Arquitetura
 - **Camada:** 2 - Toolkit (NEØ Protocol)
-- **Repo:** https://github.com/neomello/neobot
+- **Repo:** https://github.com/NEO-PROTOCOL/neobot
 - **Local:** `/Users/nettomello/CODIGOS/neobot/`
 
 ### Permissões

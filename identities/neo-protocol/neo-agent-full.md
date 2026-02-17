@@ -25,7 +25,7 @@
 
 ### Arquitetura
 - **Camada:** 3 - Cérebro (NEØ Protocol)
-- **Repo:** https://github.com/neomello/neo-agent-full
+- **Repo:** https://github.com/NEO-PROTOCOL/neo-agent-full
 - **Local:** `/Users/nettomello/CODIGOS/neo-agent-full/`
 
 ### Permissões

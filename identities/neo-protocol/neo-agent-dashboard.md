@@ -23,7 +23,7 @@
 
 ### Arquitetura
 - **Camada:** 5 - Interação & Apps (NEØ Protocol)
-- **Repo:** https://github.com/neomello/neo-agent-dashboard
+- **Repo:** https://github.com/NEO-PROTOCOL/neo-agent-dashboard
 - **Local:** `/Users/nettomello/CODIGOS/neo-agent-dashboard/`
 
 ### Permissões

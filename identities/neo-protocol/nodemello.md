@@ -24,7 +24,7 @@
 
 ### Arquitetura
 - **Camada:** 1 - Platform (NEØ Protocol)
-- **Repo:** https://github.com/neomello/neoflowoff-nodemello.run
+- **Repo:** https://github.com/NEO-PROTOCOL/neoflowoff-nodemello.run
 - **URL:** https://nodemello.run
 
 ### Permissões
