@@ -6,10 +6,11 @@ Cada agente/plataforma tem identidade própria, rastreável e documentada.
 
 ## 📚 Documentação
 
-- [Sistema MIO](./infra/identities/SISTEMA_MIO.md) - Visão geral
-- [Mapa de Identidades](./infra/identities/MAPA_MIO.md) - Painel operativo
-- [Catálogo](./infra/identities/CATALOGO.md) - Índice completo
-- [Setup Novo Repo](./infra/identities/SETUP_NOVO_REPO.md) - Guia de setup
+- [Sistema MIO](./identities/SISTEMA_MIO.md) - Visão geral
+- [Mapa de Identidades](./identities/MAPA_MIO.md) - Painel operativo
+- [Catálogo](./identities/CATALOGO.md) - Índice completo
+- [Setup Novo Repo](./identities/SETUP_NOVO_REPO.md) - Guia de setup
+- [Ecossistema](./ecosystem.json) - Mapa mestre de todos os serviços (24 projetos, 6 orgs)
 
 ## 🚀 Quick Start
 
@@ -29,7 +30,7 @@ Cada agente/plataforma tem identidade própria, rastreável e documentada.
 
 ## 🗺️ Mapa de Identidades
 
-Ver [MAPA_MIO.md](./infra/identities/MAPA_MIO.md) para visão completa do ecossistema.
+Ver [MAPA_MIO.md](./identities/MAPA_MIO.md) para visão completa do ecossistema.
 
 ## 📖 Licença
 

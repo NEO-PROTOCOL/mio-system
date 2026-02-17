@@ -2,9 +2,9 @@
 
 > **Painel de Inteligência Operativa** - Visão dinâmica do ecossistema de agentes e plataformas
 
-**Última atualização:** 2025-12-03  
-**Status geral:** 🟢 Operacional  
-**Migração concluída:** ✅ Todas identidades do flowcloser migradas e validadas
+**Última atualização:** 2026-02-17
+**Status geral:** 🟢 Operacional
+**Ecossistema:** ✅ 24 serviços mapeados em [ecosystem.json](../ecosystem.json) (6 orgs)
 
 ---
 
@@ -12,12 +12,31 @@
 
 | Categoria | Total | Ativas | Pendentes | Planejadas |
 |-----------|-------|--------|-----------|------------|
+| **NEØ Protocol Nodes** | 9 | 9 | 0 | 0 |
 | **Plataformas** | 2 | 2 | 0 | 3 |
 | **Agentes IA** | 1 | 1 | 0 | 2 |
 | **Deploy Keys** | 1 | 1 | 0 | 2 |
-| **Total** | 4 | 3 | 0 | 7 |
+| **Total** | 13 | 12 | 0 | 7 |
 
-> **Nota:** 3 identidades ativas migradas do projeto flowcloser e validadas em 2025-12-03
+> **Ecossistema completo:** 24 projetos em 6 organizações — ver [`ecosystem.json`](../ecosystem.json)
+
+---
+
+## 🟢 NEØ Protocol — Nós e Conectores Registrados
+
+| ID | Nome | Role | Status |
+|----|------|------|--------|
+| `neobot` | Node Warrior / NEO Nexus | Sovereign Orchestrator | ✅ Ativo |
+| `neo-agent-full` | NEO Agent Full (WhatsApp/TG) | Agent Node | ✅ Ativo |
+| `flowcloser` | FlowCloser | External Services Bridge | ✅ Ativo |
+| `flowpay` | FlowPay Sovereign | Financial Node (PIX↔Crypto) | ✅ Ativo |
+| `neo-agent-dashboard` | NEO Agent Dashboard | Interface / Agent Control | ✅ Ativo |
+| `neobot-dashboard` | Neobot Dashboard | Interface / Dashboard | ✅ Ativo |
+| `miniapp-telegram` | MiniApp Telegram | Interface / Mobile | ✅ Ativo |
+| `nodemello` | NodeMello | Nó Operacional | ✅ Ativo |
+| `smart-factory` | NEO Smart Factory Hub | Web3 Engineering | ✅ Ativo |
+
+> Documentação individual em `identities/neo-protocol/`
 
 ---
 
@@ -166,18 +185,18 @@
 
 ## 📈 Roadmap de Expansão
 
-### Q1 2025
+### Q1 2026
+- [ ] Registrar identidades Vercel (neo-dashboard, smart-ui, flowoff, pro-ia)
 - [ ] Completar identidades GitHub (PAT, App)
-- [ ] Adicionar Vercel e Netlify
 - [ ] Criar primeiro MCP agent
 
-### Q2 2025
+### Q2 2026
 - [ ] Implementar LangChain bots
-- [ ] Adicionar AWS/GCP
-- [ ] Automação de validação
+- [ ] Adicionar AWS/GCP service accounts
+- [ ] Automação de validação via ecosystem.json
 
-### Q3 2025
-- [ ] Dashboard de status
+### Q3 2026
+- [ ] Dashboard de status integrado (id.neoprotocol.space)
 - [ ] Rotação automática de tokens
 - [ ] Integração com secret managers
 
