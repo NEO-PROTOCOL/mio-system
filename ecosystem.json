@@ -137,7 +137,7 @@
         "name": "NEO Smart Factory Hub",
         "description": "Fábrica de Tokens e Contratos Inteligentes. Reduz fricção Web3.",
         "localPath": "../neo-smart-factory",
-        "repository": "https://github.com/neo-smart-token-factory",
+        "repository": "https://github.com/neo-smart-factory",
         "role": "Web3 Engineering Organization",
         "webhookUrl": {
             "internal": "http://smart-factory.railway.internal/api/webhook/nexus",
@@ -158,7 +158,7 @@
         "name": "Smart Core",
         "description": "Smart contracts and deployment scripts for NΞØ SMART FACTORY (Core Protocol Engine)",
         "localPath": "../neo-smart-factory/smart-core",
-        "repository": "https://github.com/neo-smart-token-factory/smart-core",
+        "repository": "https://github.com/neo-smart-factory/smart-core",
         "role": "Protocol Layer / Contracts",
         "hosting": {
             "platform": "Railway",
@@ -173,7 +173,7 @@
         "name": "Smart CLI",
         "description": "CLI universal (nxf) for NΞØ SMART FACTORY",
         "localPath": "../neo-smart-factory/cli",
-        "repository": "https://github.com/neo-smart-token-factory/smart-cli",
+        "repository": "https://github.com/neo-smart-factory/smart-cli",
         "role": "Tooling / CLI",
         "hosting": {
             "platform": "N/A (Local CLI)",
@@ -186,7 +186,7 @@
         "name": "Smart UI",
         "description": "UI interface, PWA, and landing page for NΞØ SMART FACTORY",
         "localPath": "../neo-smart-factory/smart-ui",
-        "repository": "https://github.com/neo-smart-token-factory/smart-ui",
+        "repository": "https://github.com/neo-smart-factory/smart-ui",
         "role": "Interface / PWA",
         "hosting": {
             "platform": "N/A (Library / PWA)",
@@ -199,7 +199,7 @@
         "name": "Smart UI Landing",
         "description": "Landing page comercial da Smart Token Factory",
         "localPath": "../neo-smart-factory/_legacy_forge-ui/landing",
-        "repository": "https://github.com/neo-smart-token-factory/smart-ui-landing",
+        "repository": "https://github.com/neo-smart-factory/smart-ui-landing",
         "role": "Landing Page / Traffic",
         "hosting": {
             "platform": "Vercel (nodevercel/smart-ui-landing)",
@@ -214,7 +214,7 @@
         "name": "Smart Factory Docs",
         "description": "Documentation for NΞØ SMART FACTORY",
         "localPath": "../neo-smart-factory/docs",
-        "repository": "https://github.com/neo-smart-token-factory/docs",
+        "repository": "https://github.com/neo-smart-factory/docs",
         "role": "Documentation",
         "hosting": {
             "platform": "Vercel / IPFS",
@@ -229,7 +229,7 @@
         "name": "Internal Ops",
         "description": "Operações internas e automações da Smart Factory",
         "localPath": "../neo-smart-factory/internal-ops",
-        "repository": "https://github.com/neo-smart-token-factory/internal-ops",
+        "repository": "https://github.com/neo-smart-factory/internal-ops",
         "role": "Internal Ops / Automation",
         "hosting": {
             "platform": "Private / Local",
@@ -242,7 +242,7 @@
         "name": "Smart UI Mobile (MiniApp)",
         "description": "Interface Mobile Unificada para o ecossistema Smart Factory",
         "localPath": "../neo-smart-factory/miniapp",
-        "repository": "https://github.com/neo-smart-token-factory/smart-ui-mobile",
+        "repository": "https://github.com/neo-smart-factory/smart-ui-mobile",
         "role": "Interface / Mobile / MiniApp",
         "hosting": {
             "platform": "Vercel (nodevercel/smart-ui-mobile)",
@@ -257,7 +257,7 @@
         "name": "Smart NFT",
         "description": "NFT Manager with IPFS for NΞØ SMART FACTORY",
         "localPath": "../neo-smart-factory/smart-nft",
-        "repository": "https://github.com/neo-smart-token-factory/smart-nft",
+        "repository": "https://github.com/neo-smart-factory/smart-nft",
         "role": "NFT Management",
         "hosting": {
             "platform": "IPFS / Web3",
