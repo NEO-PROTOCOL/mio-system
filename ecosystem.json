@@ -172,7 +172,7 @@
         "org": "Neo Smart Factory",
         "name": "Smart CLI",
         "description": "CLI universal (nxf) for NΞØ SMART FACTORY",
-        "localPath": "../neo-smart-factory/cli",
+        "localPath": "../neo-smart-factory/docs/smart-cli",
         "repository": "https://github.com/neo-smart-factory/smart-cli",
         "role": "Tooling / CLI",
         "hosting": {
@@ -198,7 +198,7 @@
         "org": "Neo Smart Factory",
         "name": "Smart UI Landing",
         "description": "Landing page comercial da Smart Token Factory",
-        "localPath": "../neo-smart-factory/_legacy_forge-ui/landing",
+        "localPath": "../neo-smart-factory/docs/_legacy_forge-ui/landing",
         "repository": "https://github.com/neo-smart-factory/smart-ui-landing",
         "role": "Landing Page / Traffic",
         "hosting": {
@@ -228,7 +228,7 @@
         "org": "Neo Smart Factory",
         "name": "Internal Ops",
         "description": "Operações internas e automações da Smart Factory",
-        "localPath": "../neo-smart-factory/internal-ops",
+        "localPath": "../neo-smart-factory/docs/internal-ops",
         "repository": "https://github.com/neo-smart-factory/internal-ops",
         "role": "Internal Ops / Automation",
         "hosting": {
@@ -241,7 +241,7 @@
         "org": "Neo Smart Factory",
         "name": "Smart UI Mobile (MiniApp)",
         "description": "Interface Mobile Unificada para o ecossistema Smart Factory",
-        "localPath": "../neo-smart-factory/miniapp",
+        "localPath": "../neo-smart-factory/docs/smart-ui-mobile",
         "repository": "https://github.com/neo-smart-factory/smart-ui-mobile",
         "role": "Interface / Mobile / MiniApp",
         "hosting": {
