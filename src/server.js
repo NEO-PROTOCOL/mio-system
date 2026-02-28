@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.json());
@@ -54,6 +54,27 @@ app.get('/api/v1/identities', (req, res) => {
     res.json({
         message: "Identity Registry is active. See /api/v1/ecosystem for node mappings.",
         registryPath: "identities/"
+    });
+});
+
+// Nexus-compatible webhook endpoint
+app.post('/api/webhook/nexus', (req, res) => {
+    const { event, payload } = req.body || {};
+
+    if (!event || typeof event !== 'string') {
+        return res.status(400).json({
+            error: 'Bad Request',
+            message: 'Missing or invalid "event" field'
+        });
+    }
+
+    console.log(`[MIO] Webhook received: ${event}`);
+
+    res.status(200).json({
+        status: 'accepted',
+        event,
+        receivedAt: new Date().toISOString(),
+        payload: payload || {}
     });
 });
 

@@ -82,13 +82,13 @@
     {
         "id": "mio-system",
         "org": "NEO Protocol",
-        "name": "MIO System (Identity)",
+        "name": "MIO ID System",
         "description": "Modelo de Identidade Operacional - Backend Security Layer (Substitui Auth Tradicional)",
         "localPath": "../mio-system",
         "repository": "https://github.com/NEO-PROTOCOL/mio-system.git",
         "role": "Identity Layer",
         "webhookUrl": {
-            "local": "http://localhost:4000/api/webhook/nexus",
+            "local": "http://localhost:8080/api/webhook/nexus",
             "internal": "http://mio-system.railway.internal/api/webhook/nexus",
             "production": "https://id.neoprotocol.space/api/webhook/nexus"
         },
