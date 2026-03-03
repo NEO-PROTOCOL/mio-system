@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD003 MD007 MD011 MD013 MD022 MD023 MD025 MD029 MD032 MD033 MD034 -->
+
 # 🔐 Sistema MIO - Modelo de Identidade Operacional
 
 Infraestrutura de coordenação entre inteligências não-humanas.
@@ -35,3 +37,23 @@ Ver [MAPA_MIO.md](./identities/MAPA_MIO.md) para visão completa do ecossistema.
 ## 📖 Licença
 
 MIT
+
+────────────────────────────────────────
+
+▓▓▓ NΞØ MELLØ
+────────────────────────────────────────
+Core Architect · NΞØ Protocol
+neo@neoprotocol.space
+
+"Code is law. Expand until
+silence becomes structure."
+────────────────────────────────────────
+```
+ █████ █         
+██╔═══██╗       
+██║ █ ██║  
+██ █  ██║      
+╚██████╔╝   
+█ ╚═══╝     
+
+```
