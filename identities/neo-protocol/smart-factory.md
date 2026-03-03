@@ -24,11 +24,11 @@
 ### Arquitetura
 - **Camada:** Valor & Token (NEØ Protocol)
 - **Repos:**
-  - https://github.com/neo-smart-token-factory/smart-core
-  - https://github.com/neo-smart-token-factory/docs
-  - https://github.com/neo-smart-token-factory/smart-ui
-  - https://github.com/neo-smart-token-factory/smart-cli
-  - https://github.com/neo-smart-token-factory/smart-ui-landing
+  - https://github.com/neo-smart-factory/smart-core
+  - https://github.com/neo-smart-factory/docs
+  - https://github.com/neo-smart-factory/smart-ui
+  - https://github.com/neo-smart-factory/smart-cli
+  - https://github.com/neo-smart-factory/smart-ui-landing
 - **Local:** `/Users/nettomello/CODIGOS/neo-smart-token/`
 
 ### Permissões

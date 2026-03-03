@@ -1,9 +1,10 @@
 [
     {
-        "id": "neobot-architect",
+        "id": "neobot-orchestrator",
+        "aliases": ["neobot-architect"],
         "org": "NEO Protocol",
-        "name": "Neobot — Node Warrior / NEO Nexus",
-        "description": "Node Warrior: Agente Central do NEO Protocol. Orquestrador soberano (nexus.neoprotocol.space), arquiteto e executor. Contém o Protocol Nexus Event Bus e as identidades mio-system em src/neo/identity/.",
+        "name": "Neobot — Node Warrior / Orchestrator",
+        "description": "Node Warrior: Agente central do NEO Protocol. Orquestrador soberano, arquiteto e executor operacional do ecossistema.",
         "localPath": ".",
         "repository": "https://github.com/NEO-PROTOCOL/neobot.git",
         "role": "Sovereign Node / Orchestrator / Architect",
@@ -32,12 +33,12 @@
         "id": "neo-agent-full",
         "org": "NEO Protocol",
         "name": "NEO Agent Full (WhatsApp/TG)",
-        "description": "Agente IA Full-Stack (WhatsApp/TG) soberano. Integrado via Railway Project.",
+        "description": "Agente IA Full-Stack (WhatsApp/TG) soberano. Integrado via Railway Project e Modal.",
         "localPath": "../neo-agent-full",
         "repository": "https://github.com/NEO-PROTOCOL/neo-agent-full.git",
         "role": "Agent Node / Autonomous Service",
         "webhookUrl": {
-            "local": "http://localhost:8080/api/webhook/nexus",
+            "local": "http://localhost:8042/api/webhook/nexus",
             "internal": "http://neo-agent-full.railway.internal/api/webhook/nexus",
             "production": "https://agent.neoprotocol.space/api/webhook/nexus"
         },
@@ -53,11 +54,11 @@
     {
         "id": "neo-nexus",
         "org": "NEO Protocol",
-        "name": "NEO Nexus (Event Hub — standalone)",
+        "name": "NEO Nexus Event Hub",
         "description": "Standalone Event Hub do Protocolo NEØ. Distribui eventos para todos os nós via HTTP webhook. Docker + Railway. Porta 3000.",
         "localPath": "../neo-nexus",
         "repository": "https://github.com/NEO-PROTOCOL/neo-nexus.git",
-        "role": "Event Hub / Relay",
+        "role": "Event Hub",
         "localUrl": "http://localhost:3000",
         "webhookUrl": {
             "local": "http://localhost:3000/api/events",
@@ -82,13 +83,13 @@
     {
         "id": "mio-system",
         "org": "NEO Protocol",
-        "name": "MIO System (Identity)",
+        "name": "MIO System",
         "description": "Modelo de Identidade Operacional - Backend Security Layer (Substitui Auth Tradicional)",
         "localPath": "../mio-system",
         "repository": "https://github.com/NEO-PROTOCOL/mio-system.git",
         "role": "Identity Layer",
         "webhookUrl": {
-            "local": "http://localhost:4000/api/webhook/nexus",
+            "local": "http://localhost:8080/api/webhook/nexus",
             "internal": "http://mio-system.railway.internal/api/webhook/nexus",
             "production": "https://id.neoprotocol.space/api/webhook/nexus"
         },
@@ -137,7 +138,7 @@
         "name": "NEO Smart Factory Hub",
         "description": "Fábrica de Tokens e Contratos Inteligentes. Reduz fricção Web3.",
         "localPath": "../neo-smart-factory",
-        "repository": "https://github.com/neo-smart-token-factory",
+        "repository": "https://github.com/neo-smart-factory",
         "role": "Web3 Engineering Organization",
         "webhookUrl": {
             "internal": "http://smart-factory.railway.internal/api/webhook/nexus",
@@ -158,7 +159,7 @@
         "name": "Smart Core",
         "description": "Smart contracts and deployment scripts for NΞØ SMART FACTORY (Core Protocol Engine)",
         "localPath": "../neo-smart-factory/smart-core",
-        "repository": "https://github.com/neo-smart-token-factory/smart-core",
+        "repository": "https://github.com/neo-smart-factory/smart-core",
         "role": "Protocol Layer / Contracts",
         "hosting": {
             "platform": "Railway",
@@ -172,8 +173,8 @@
         "org": "Neo Smart Factory",
         "name": "Smart CLI",
         "description": "CLI universal (nxf) for NΞØ SMART FACTORY",
-        "localPath": "../neo-smart-factory/cli",
-        "repository": "https://github.com/neo-smart-token-factory/smart-cli",
+        "localPath": "../neo-smart-factory/docs/smart-cli",
+        "repository": "https://github.com/neo-smart-factory/smart-cli",
         "role": "Tooling / CLI",
         "hosting": {
             "platform": "N/A (Local CLI)",
@@ -186,7 +187,7 @@
         "name": "Smart UI",
         "description": "UI interface, PWA, and landing page for NΞØ SMART FACTORY",
         "localPath": "../neo-smart-factory/smart-ui",
-        "repository": "https://github.com/neo-smart-token-factory/smart-ui",
+        "repository": "https://github.com/neo-smart-factory/smart-ui",
         "role": "Interface / PWA",
         "hosting": {
             "platform": "N/A (Library / PWA)",
@@ -198,8 +199,8 @@
         "org": "Neo Smart Factory",
         "name": "Smart UI Landing",
         "description": "Landing page comercial da Smart Token Factory",
-        "localPath": "../neo-smart-factory/_legacy_forge-ui/landing",
-        "repository": "https://github.com/neo-smart-token-factory/smart-ui-landing",
+        "localPath": "../neo-smart-factory/docs/_legacy_forge-ui/landing",
+        "repository": "https://github.com/neo-smart-factory/smart-ui-landing",
         "role": "Landing Page / Traffic",
         "hosting": {
             "platform": "Vercel (nodevercel/smart-ui-landing)",
@@ -214,7 +215,7 @@
         "name": "Smart Factory Docs",
         "description": "Documentation for NΞØ SMART FACTORY",
         "localPath": "../neo-smart-factory/docs",
-        "repository": "https://github.com/neo-smart-token-factory/docs",
+        "repository": "https://github.com/neo-smart-factory/docs",
         "role": "Documentation",
         "hosting": {
             "platform": "Vercel / IPFS",
@@ -228,8 +229,8 @@
         "org": "Neo Smart Factory",
         "name": "Internal Ops",
         "description": "Operações internas e automações da Smart Factory",
-        "localPath": "../neo-smart-factory/internal-ops",
-        "repository": "https://github.com/neo-smart-token-factory/internal-ops",
+        "localPath": "../neo-smart-factory/docs/internal-ops",
+        "repository": "https://github.com/neo-smart-factory/internal-ops",
         "role": "Internal Ops / Automation",
         "hosting": {
             "platform": "Private / Local",
@@ -241,8 +242,8 @@
         "org": "Neo Smart Factory",
         "name": "Smart UI Mobile (MiniApp)",
         "description": "Interface Mobile Unificada para o ecossistema Smart Factory",
-        "localPath": "../neo-smart-factory/miniapp",
-        "repository": "https://github.com/neo-smart-token-factory/smart-ui-mobile",
+        "localPath": "../neo-smart-factory/docs/smart-ui-mobile",
+        "repository": "https://github.com/neo-smart-factory/smart-ui-mobile",
         "role": "Interface / Mobile / MiniApp",
         "hosting": {
             "platform": "Vercel (nodevercel/smart-ui-mobile)",
@@ -257,7 +258,7 @@
         "name": "Smart NFT",
         "description": "NFT Manager with IPFS for NΞØ SMART FACTORY",
         "localPath": "../neo-smart-factory/smart-nft",
-        "repository": "https://github.com/neo-smart-token-factory/smart-nft",
+        "repository": "https://github.com/neo-smart-factory/smart-nft",
         "role": "NFT Management",
         "hosting": {
             "platform": "IPFS / Web3",
