@@ -205,7 +205,7 @@
         "org": "Neo Smart Factory",
         "name": "Smart CLI",
         "description": "CLI universal (nxf) for NΞØ SMART FACTORY",
-        "localPath": "../neo-smart-factory/smart-cli",
+        "localPath": "../../neo-smart-factory/smart-cli",
         "repository": "https://github.com/neo-smart-token-factory/smart-cli",
         "role": "Tooling / CLI",
         "hosting": {
@@ -304,22 +304,27 @@
     {
         "id": "flowpay",
         "org": "FlowPay (NEØ Stack)",
-        "name": "FlowPay App (Checkout Astro)",
-        "description": "Aplicação de checkout da stack NEØ Protocol (separada do FlowPay Core). Astro SSR + endpoints /api para create-charge, charge status e webhooks.",
+        "name": "FlowPay Platform (Marketing + App + API)",
+        "description": "Plataforma FlowPay na stack NEØ Protocol. Contrato canonico: API em api.flowpay.cash, app em app.flowpay.cash e marketing em flowpay.cash.",
         "stackBoundary": {
             "belongsToNeoProtocolStack": true,
             "commercialTrack": "stack",
             "doNotConfuseWith": "flowpay-core"
         },
         "localPath": "../../flowpay",
-        "absolutePath": "/usr/local/projects/flowpay",
+        "absolutePath": "/Users/nettomello/neomello/flowpay",
         "repository": "https://github.com/flowpaycash/flowpay",
         "role": "Checkout / Financial Node (Stack)",
-        "localUrl": "http://localhost:4321",
+        "localUrl": "http://localhost:8787",
+        "serviceEndpoints": {
+            "marketing": "https://flowpay.cash",
+            "app": "https://app.flowpay.cash",
+            "api": "https://api.flowpay.cash"
+        },
         "webhookUrl": {
-            "local": "http://localhost:4321/api/webhook/nexus",
-            "internal": "http://flowpay.railway.internal/api/webhook/nexus",
-            "production": "https://flowpay.cash/api/webhook/nexus"
+            "local": "http://localhost:8787/api/webhook",
+            "internal": "https://api.flowpay.cash/api/webhook",
+            "production": "https://api.flowpay.cash/api/webhook"
         },
         "nexusEvents": {
             "emits": [
@@ -361,17 +366,16 @@
             }
         },
         "hosting": {
-            "platform": "Railway",
-            "railwayProjectId": "0a6c292a-b3b2-4873-96a7-2e84e7b9b38c",
-            "productionUrl": "https://flowpay.cash",
-            "internalUrl": "http://flowpay.railway.internal",
-            "targetCustomDomain": "flowpay.cash",
-            "port": 4321,
+            "platform": "Cloudflare Workers + D1 (API) / Cloudflare Pages (Web)",
+            "productionUrl": "https://api.flowpay.cash",
+            "activeUrl": "https://api.flowpay.cash",
+            "targetCustomDomain": "api.flowpay.cash",
+            "port": 8787,
             "adminEmail": "neo@neoprotocol.space",
             "governance": "NEØ SMART CONTRACT",
-            "buildCommand": "npm run build",
-            "startCommand": "PORT=4321 npm start",
-            "healthcheck": "/api/health"
+            "buildCommand": "wrangler deploy",
+            "startCommand": "wrangler dev",
+            "healthcheck": "/health"
         }
     },
     {
@@ -452,7 +456,7 @@
         "org": "WOD Game",
         "name": "WOD Core API / Contracts",
         "description": "Contratos Inteligentes e Lógica de Tokenomics do WOD",
-        "localPath": "../../wodxpro/wod-eth",
+        "localPath": "../../wodxpro/wod-contracts",
         "repository": "https://github.com/wodxpro/wod-eth",
         "role": "Protocol Layer",
         "hosting": {
