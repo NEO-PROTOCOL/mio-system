@@ -10,6 +10,9 @@ app.use(cors());
 app.use(express.json());
 
 // Load Ecosystem Config
+// ⚠️  SOURCE OF TRUTH: neobot/config/ecosystem.json
+// This file is a COPY — do NOT edit here directly.
+// To update: copy from NEO-PROTOCOL/neobot/config/ecosystem.json
 const ecosystemPath = path.join(__dirname, '..', 'ecosystem.json');
 let ecosystemConfig = {};
 
