@@ -2,58 +2,61 @@
 
 ```text
 ========================================
-   NΞØ PROTOCOL · GITHUB ACTIONS
+   NΞØ PROTOCOL · SMART CORE ENGINE
 ========================================
 ```
 
-Configuração de CI/CD para validação automática de identidades operacionais.
+O coração técnico da Smart Factory, gerenciando contratos inteligentes e emissão de tokens.
 
-> **Workflow:** validate-identities.yml
-> **Trigger:** Push / Daily Schedule
-> **Status:** 🟢 Active
+> **Version:** v1.0.0
+> **Status:** 🟢 Mainnet Ready
+> **Network:** Base L2 / TON
 
 ────────────────────────────────────────
 
-## 🎯 Objetivo: Audit Contínuo
+## 🎯 What is Smart Core?
 
-O workflow `validate-identities.yml` garante que o `mio-system` mantenha a integridade das suas identidades registradas sem intervenção manual.
+A camada fundamental de protocolos e contratos inteligentes (Solidity) que regem o $NEOFLW e outros ativos do ecossistema.
 
 ```text
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-┃ WORKFLOW STEPS
+┃ CORE CAPABILITIES
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┃
-┃ 📂 Step 1: Checkout Code
-┃    └─ Root: mio-system
+┃ 🪙 Token Engine
+┃    └─ $NEOFLW (ERC20Permit + TON Jetton)
 ┃
-┃ 🛡️ Step 2: Validate Access
-┃    └─ Run scripts/validate-access.sh
+┃ 🏭 Contract Factory
+┃    └─ Hardhat / Foundry framework
 ┃
-┃ 📊 Step 3: Generate Summary
-┃    └─ Post to GitHub Actions Run
+┃ 🛡️ Circuit Breaker
+┃    └─ Advanced security patterns
+┃
+┃ 🌉 Cross-chain Bridge
+┃    └─ Base <-> TON assets
 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ────────────────────────────────────────
 
-## 🛠 Execução Manual (CLI)
+## 📂 Architecture
 
-```bash
-# Executar via GitHub CLI
-gh workflow run validate-identities.yml
-
-# Monitorar logs em tempo real
-gh run view --log
-```
+- **Repo:** https://github.com/neo-smart-factory/smart-core
+- **Local:** `/Users/nettomello/neomello/neo-smart-factory/smart-core/`
 
 ────────────────────────────────────────
 
-## 📈 Cronogramas
+## ✅ Verificação
 
-- **Diário:** 02:00 AM (UTC)
-- **Push:** Qualquer mudança em `identities/**`.
-- **Manual:** `workflow_dispatch` ativado.
+```bash
+# Compilar contratos
+cd /Users/nettomello/neomello/neo-smart-factory/smart-core
+npm run build
+
+# Verificar deployments
+ls deployments/*.json
+```
 
 ────────────────────────────────────────
 

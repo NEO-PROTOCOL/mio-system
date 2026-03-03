@@ -1,64 +1,79 @@
-# 🔑 agent: neobot
+<!-- markdownlint-disable MD003 MD007 MD011 MD013 MD022 MD023 MD025 MD029 MD032 MD033 MD034 -->
 
-## 📋 Metadados
+```text
+========================================
+   NΞØ PROTOCOL · NEOBOT ORCHESTRATOR
+========================================
+```
 
-| Campo | Valor |
-|-------|-------|
-| **Nome** | `neobot` |
-| **Tipo** | agent |
-| **Plataforma** | neo-protocol |
-| **Função** | Toolkit/Operations |
-| **Criada em** | 2026-01-30 |
-| **Status** | 🟢 Ativo |
+Sovereign Orchestrator do ecossistema NΞØ Protocol, motor central de automação e inteligência.
 
----
+> **Version:** v1.0.0
+> **Status:** 🟢 Ativo
+> **Engine:** Moltbot + OpenClaw (Fork)
 
-## 🔐 Detalhes Técnicos
+────────────────────────────────────────
 
-### Stack
-- **Language:** TypeScript (Node.js)
-- **Skills:** 70+ modular skills
-- **MCP:** Server completo (Notion, Brave, GitHub)
-- **Messaging:** Telegram Bot, WhatsApp (Baileys nativo)
-- **CLI:** moltbot commands
+## 🎯 What is Neobot?
 
-### Arquitetura
-- **Camada:** 2 - Toolkit (NEØ Protocol)
+O Neobot é o nó central de orquestração, responsável por gerenciar skills, MCP servers e integrações multi-canal (WhatsApp, Telegram, Slack, etc).
+
+```text
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃ CORE CAPABILITIES
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃
+┃ 🤖 Skill System
+┃    └─ 70+ modular skills (factory, flowpay, etc)
+┃
+┃ 🛰️ MCP Servers
+┃    └─ Notion, Brave, GitHub integration
+┃
+┃ 📱 Multi-channel
+┃    └─ Baileys (WA), Telegram, Slack, Discord
+┃
+┃ 🛠️ Native CLI
+┃    └─ neobot command (neobot.mjs)
+┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+────────────────────────────────────────
+
+## 📂 Architecture
+
 - **Repo:** https://github.com/NEO-PROTOCOL/neobot
-- **Local:** `/Users/nettomello/CODIGOS/neobot/`
+- **Local:** `/Users/nettomello/neomello/NEO-PROTOCOL/neobot/`
 
-### Permissões
-- ✅ **Read:** File system, Notion (MCP), GitHub
-- ✅ **Write:** Telegram, WhatsApp (Baileys), Ledger, Health logs
-- ✅ **Execute:** Skills (factory, flowpay, notion, telegram)
-
-### Skills Principais
-- `smart-factory/` - Deploy, mint, bridge tokens
-- `flowpay/` - PIX payment gateway
-- `telegram/` - Bot com comandos
-- `notion/` - Work logs, projects, tasks
-
----
+────────────────────────────────────────
 
 ## ✅ Verificação
 
 ```bash
 # Iniciar Neobot
-cd /Users/nettomello/CODIGOS/neobot
-pnpm moltbot --help
+cd /Users/nettomello/neomello/NEO-PROTOCOL/neobot
+npm start
 
-# Testar Telegram Bot
-pnpm moltbot telegram start
-
-# Testar WhatsApp
-pnpm moltbot channels login --channel whatsapp
+# Testar Skill
+moltbot skills list
 ```
 
----
+────────────────────────────────────────
 
-## 📝 Notas
+▓▓▓ NΞØ MELLØ
+────────────────────────────────────────
+Core Architect · NΞØ Protocol
+neo@neoprotocol.space
 
-- Toolkit operacional completo
-- 11/14 skills implementadas (79%)
-- Telegram Bot funcional
-- WhatsApp aguardando ativação
+"Code is law. Expand until
+silence becomes structure."
+────────────────────────────────────────
+```
+ █████ █         
+██╔═══██╗       
+██║ █ ██║  
+██ █  ██║      
+╚██████╔╝   
+█ ╚═══╝     
+
+```

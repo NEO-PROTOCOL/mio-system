@@ -1,63 +1,75 @@
-# 🔑 agent: neo-agent-full
+<!-- markdownlint-disable MD003 MD007 MD011 MD013 MD022 MD023 MD025 MD029 MD032 MD033 MD034 -->
 
-## 📋 Metadados
+```text
+========================================
+   NΞØ PROTOCOL · NEO AGENT FULL
+========================================
+```
 
-| Campo | Valor |
-|-------|-------|
-| **Nome** | `neo-agent-full` |
-| **Tipo** | agent |
-| **Plataforma** | neo-protocol |
-| **Função** | Cerebro/LangGraph ReAct |
-| **Criada em** | 2026-01-30 |
-| **Status** | 🟢 Ativo |
+Agente IA Full-Stack com capacidades cognitivas avançadas e planejamento autônomo.
 
----
+> **Version:** v1.0.0
+> **Status:** 🟢 Ativo
+> **Framework:** LangGraph ReAct / OpenClaw
 
-## 🔐 Detalhes Técnicos
+────────────────────────────────────────
 
-### Stack
-- **Framework:** LangGraph ReAct
-- **LLMs:** Gemini 1.5, Claude, ASI1
-- **Database:** Kwil DB (decentralized SQL)
-- **Identity:** Ceramic Network (DID, immutable logs)
-- **Storage:** IPFS (cold storage), GUN.js (P2P sync)
-- **Memory:** Soberana (KWil + Ceramic)
+## 🎯 What is NEO Agent Full?
 
-### Arquitetura
-- **Camada:** 3 - Cérebro (NEØ Protocol)
+O cérebro cognitivo do ecossistema, capaz de realizar raciocínio de múltiplos passos e coordenação de ferramentas (Tool Use).
+
+```text
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃ CORE CAPABILITIES
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃
+┃ 🧠 Cognition
+┃    └─ LangGraph planning & multi-agent
+┃
+┃ 🗄️ Memory
+┃    └─ Sovereign (KWil + Ceramic)
+┃
+┃ 🛰️ Connectivity
+┃    └─ iMessage, WhatsApp, Telegram, Signal
+┃
+┃ 🛠️ Tool Use
+┃    └─ GitHub, Notion, Brave Search
+┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+────────────────────────────────────────
+
+## 📂 Architecture
+
 - **Repo:** https://github.com/NEO-PROTOCOL/neo-agent-full
-- **Local:** `/Users/nettomello/CODIGOS/neo-agent-full/`
+- **Local:** `/Users/nettomello/neomello/NEO-PROTOCOL/neo-agent-full/`
 
-### Permissões
-- ✅ **Read:** GitHub, Brave Search, Notion (MCP)
-- ✅ **Write:** Twitter, Kwil DB, Ceramic Logs, IPFS
-- ✅ **Execute:** LangGraph planning, Tool use, Multi-step reasoning
-
-### DID
-- **Status:** ⏳ Aguardando criação via Ceramic
-- **Namespace:** `did:ceramic:neo-agent-full`
-
----
+────────────────────────────────────────
 
 ## ✅ Verificação
 
 ```bash
-# Testar agent full
-cd /Users/nettomello/CODIGOS/neo-agent-full
-pnpm start
-
-# Verificar Kwil connection
-pnpm test:kwil
-
-# Verificar Ceramic DID
-pnpm test:ceramic
+# Monitorar logs do Agente
+tail -f /Users/nettomello/neomello/NEO-PROTOCOL/neo-agent-full/logs/current.log
 ```
 
----
+────────────────────────────────────────
 
-## 📝 Notas
+▓▓▓ NΞØ MELLØ
+────────────────────────────────────────
+Core Architect · NΞØ Protocol
+neo@neoprotocol.space
 
-- Agente principal de raciocínio complexo
-- Memória persistente via Kwil + Ceramic
-- Identidade soberana (DID)
-- Integra com NodeMello para coordenação
+"Code is law. Expand until
+silence becomes structure."
+────────────────────────────────────────
+```
+ █████ █         
+██╔═══██╗       
+██║ █ ██║  
+██ █  ██║      
+╚██████╔╝   
+█ ╚═══╝     
+
+```

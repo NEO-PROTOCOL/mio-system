@@ -2,58 +2,59 @@
 
 ```text
 ========================================
-   NΞØ PROTOCOL · GITHUB ACTIONS
+   NΞØ PROTOCOL · LANDING BOOTLOADER
 ========================================
 ```
 
-Configuração de CI/CD para validação automática de identidades operacionais.
+O ponto de entrada soberano e bootloader visual do ecossistema NΞØ Protocol.
 
-> **Workflow:** validate-identities.yml
-> **Trigger:** Push / Daily Schedule
-> **Status:** 🟢 Active
+> **Version:** v1.0.0
+> **Status:** 🟢 Ativo
+> **Stack:** Next.js / React
 
 ────────────────────────────────────────
 
-## 🎯 Objetivo: Audit Contínuo
+## 🎯 What is NEO Protcl?
 
-O workflow `validate-identities.yml` garante que o `mio-system` mantenha a integridade das suas identidades registradas sem intervenção manual.
+A interface de entrada que mantém a identidade visual unificada (Terminal/Cyberpunk) e serve como bootloader para os outros serviços.
 
 ```text
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-┃ WORKFLOW STEPS
+┃ CORE CAPABILITIES
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┃
-┃ 📂 Step 1: Checkout Code
-┃    └─ Root: mio-system
+┃ 🌐 Bootloader
+┃    └─ Decentralized entry point
 ┃
-┃ 🛡️ Step 2: Validate Access
-┃    └─ Run scripts/validate-access.sh
+┃ 🗺️ Navigator
+┃    └─ Visual map of the ecosystem
 ┃
-┃ 📊 Step 3: Generate Summary
-┃    └─ Post to GitHub Actions Run
+┃ 🛡️ IPFS Ready
+┃    └─ Decentralized static hosting
+┃
+┃ 🎨 Cyberpunk UI
+┃    └─ High-fidelity aesthetic
 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ────────────────────────────────────────
 
-## 🛠 Execução Manual (CLI)
+## 📂 Architecture
 
-```bash
-# Executar via GitHub CLI
-gh workflow run validate-identities.yml
-
-# Monitorar logs em tempo real
-gh run view --log
-```
+- **Repo:** https://github.com/NEO-PROTOCOL/neo-protcl.git
+- **Local:** `/Users/nettomello/neomello/NEO-PROTOCOL/neo-protcl/`
+- **URL:** https://neoprotocol.space
 
 ────────────────────────────────────────
 
-## 📈 Cronogramas
+## ✅ Verificação
 
-- **Diário:** 02:00 AM (UTC)
-- **Push:** Qualquer mudança em `identities/**`.
-- **Manual:** `workflow_dispatch` ativado.
+```bash
+# Iniciar Servidor local
+cd /Users/nettomello/neomello/NEO-PROTOCOL/neo-protcl
+pnpm dev
+```
 
 ────────────────────────────────────────
 

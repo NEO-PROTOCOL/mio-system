@@ -2,58 +2,63 @@
 
 ```text
 ========================================
-   NΞØ PROTOCOL · GITHUB ACTIONS
+   NΞØ PROTOCOL · NEO NEXUS HUB
 ========================================
 ```
 
-Configuração de CI/CD para validação automática de identidades operacionais.
+Event Hub e Webhook Dispatcher central para coordenação universal de webhooks e eventos.
 
-> **Workflow:** validate-identities.yml
-> **Trigger:** Push / Daily Schedule
-> **Status:** 🟢 Active
+> **Version:** v1.0.0
+> **Status:** 🟢 Ativo
+> **Engine:** Node.js + Hono
 
 ────────────────────────────────────────
 
-## 🎯 Objetivo: Audit Contínuo
+## 🎯 What is NEO Nexus?
 
-O workflow `validate-identities.yml` garante que o `mio-system` mantenha a integridade das suas identidades registradas sem intervenção manual.
+O nó de infraestrutura responsável pela distribuição universal de webhooks e execução de regras de reação (Reactors).
 
 ```text
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-┃ WORKFLOW STEPS
+┃ CORE CAPABILITIES
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┃
-┃ 📂 Step 1: Checkout Code
-┃    └─ Root: mio-system
+┃ 🛰️ Event Hub
+┃    └─ Universal webhook collection
 ┃
-┃ 🛡️ Step 2: Validate Access
-┃    └─ Run scripts/validate-access.sh
+┃ ⚡ Reactor Engine
+┃    └─ Filtering & Dispatching rules
 ┃
-┃ 📊 Step 3: Generate Summary
-┃    └─ Post to GitHub Actions Run
+┃ 🛡️ Auth Proxy
+┃    └─ mio-system signature validation
+┃
+┃ 🐋 Edge Ready
+┃    └─ Railway Docker deployment
 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ────────────────────────────────────────
 
-## 🛠 Execução Manual (CLI)
+## 📂 Architecture
 
-```bash
-# Executar via GitHub CLI
-gh workflow run validate-identities.yml
-
-# Monitorar logs em tempo real
-gh run view --log
-```
+- **Repo:** https://github.com/NEO-PROTOCOL/neo-nexus.git
+- **Local:** `/Users/nettomello/neomello/NEO-PROTOCOL/neo-nexus/`
+- **URL:** https://nexus.neoprotocol.space
 
 ────────────────────────────────────────
 
-## 📈 Cronogramas
+## ✅ Verificação
 
-- **Diário:** 02:00 AM (UTC)
-- **Push:** Qualquer mudança em `identities/**`.
-- **Manual:** `workflow_dispatch` ativado.
+```bash
+# Health Check
+curl https://nexus.neoprotocol.space/health
+
+# Trigger Test Event
+curl -X POST https://nexus.neoprotocol.space/api/events \
+  -H "Content-Type: application/json" \
+  -d '{"type": "TEST_EVENT"}'
+```
 
 ────────────────────────────────────────
 

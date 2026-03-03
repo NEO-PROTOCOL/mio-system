@@ -1,133 +1,77 @@
-# ✅ Próximos Passos - Sistema MIO
+<!-- markdownlint-disable MD003 MD007 MD011 MD013 MD022 MD023 MD025 MD029 MD032 MD033 MD034 -->
 
-## 📋 Checklist da Issue #1
-
-### ✅ Concluído
-- [x] GitHub Deploy Key migrada
-- [x] Railway Deploy migrada
-- [x] Cursor AI migrada
-- [x] GitHub Project criado
-- [x] Issue #1 criada e vinculada ao Project
-- [x] GitHub Actions workflow criado
-
-### 🔄 Em Progresso / Próximos
-
-#### 1. Validar Todas Identidades
-```bash
-cd /Users/nettomello/CODIGOS/bots_ia/mio-system
-./identities/scripts/validate-access.sh
+```text
+========================================
+   NΞØ PROTOCOL · NEXT STEPS (ROADMAP)
+========================================
 ```
 
-**Status:** ⏳ Pendente  
-**Ação:** Executar validação local
+Checklist operacional e roadmap de expansão do Sistema MIO.
 
----
+> **Phase:** 2.0 (OpenClaw Integration)
+> **Priority:** High
+> **Orchestrator:** Neobot
 
-#### 2. Atualizar MAPA_MIO.md
-- [ ] Marcar identidades migradas como ✅ Ativas
-- [ ] Atualizar estatísticas
-- [ ] Adicionar notas sobre migração
+────────────────────────────────────────
 
-**Status:** ⏳ Pendente  
-**Ação:** Editar `identities/MAPA_MIO.md`
+## 🎯 Current Objectives (High Priority)
 
----
-
-#### 3. Configurar GitHub Actions
-- [x] Workflow criado (`validate-identities.yml`)
-- [x] Caminhos corrigidos
-- [ ] Testar workflow manualmente
-
-**Status:** ✅ Criado, ⏳ Testar  
-**Ação:** 
-```bash
-# Testar workflow manualmente
-gh workflow run validate-identities.yml
+```text
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ TASK                        | STATUS ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━┫
+┃ Standardize identities docs | ✅ DONE ┃
+┃ Sync with Neobot Config     | ✅ DONE ┃
+┃ Remove Legacy flowcloser    | ✅ DONE ┃
+┃ Unified Identity Dashboard  | 🔄 WIP  ┃
+┃ Web3 Signature Validator    | 🔄 WIP  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━┛
 ```
 
----
+────────────────────────────────────────
 
-#### 4. Ativar Branch Protection
-- [ ] Configurar regras para `main`
-- [ ] Require pull request reviews
-- [ ] Require status checks (validate-identities)
+## 🚀 Expansion Roadmap
 
-**Status:** ⏳ Pendente  
-**Ação:** Via GitHub Settings → Branches
+### 1. Unified Identity Dashboard
+- Implementar visualização real-time de todos os 28 repositórios.
+- Consolidar logs do Neobot e Agent Full em um único stream.
 
----
+### 2. Sovereign Auth Layer
+- Migrar todos os tokens estáticos para assinaturas dinâmicas via `mio-system`.
+- Integrar com 1Password para gestão segura de chaves privadas em tempo de execução.
 
-## 🚀 Expansões Futuras
+### 3. Multi-chain Expansion
+- Registrar identidades específicas para nós TON e Base L2 de forma isolada.
+- Monitoramento de saldo automático para carteiras operacionais.
 
-### Identidades Planejadas
+────────────────────────────────────────
 
-1. **GitHub PAT CI** (`github-pat-ci`)
-   - Tipo: Personal Access Token
-   - Uso: PRs automatizados, GitHub Actions
-   - Prioridade: Medium
+## 🛠 Operations
 
-2. **Vercel Deploy** (`vercel-deploy`)
-   - Tipo: Deploy Key/Token
-   - Uso: Deploy frontend/APIs
-   - Prioridade: Low
-
-3. **MCP DevOps Agent** (`mcp-devops`)
-   - Tipo: MCP Agent
-   - Escopo: Branches `dev/*`
-   - Prioridade: Medium
-
-4. **LangChain Analyst Bot** (`langchain-analyst`)
-   - Tipo: LangChain Bot
-   - Função: Análise de código
-   - Prioridade: Low
-
----
-
-## 📝 Como Adicionar Nova Identidade
-
-### Via Script (Recomendado)
 ```bash
+# Registrar nova identidade
 ./scripts/register-identity.sh {tipo} {nome} {plataforma}
 
-# Exemplo:
-./scripts/register-identity.sh deploy-key vercel-deploy vercel
+# Sincronizar identidades com o orquestrador
+cd ../neobot && pnpm sync-graph
 ```
 
-### Via Issue Template
-1. Criar nova issue usando template `nova-identidade.md`
-2. Preencher metadados
-3. Seguir checklist da issue
-4. Adicionar ao Project
+────────────────────────────────────────
 
----
+▓▓▓ NΞØ MELLØ
+────────────────────────────────────────
+Core Architect · NΞØ Protocol
+neo@neoprotocol.space
 
-## 🔄 Workflow Operacional
-
-```mermaid
-graph TD
-    A[Nova Identidade Identificada] --> B[register-identity.sh]
-    B --> C[Criar Issue via Template]
-    C --> D[Preencher Documentação]
-    D --> E[Atualizar MAPA_MIO.md]
-    E --> F[validate-access.sh]
-    F --> G{Validação OK?}
-    G -->|Sim| H[Mover Issue para Done]
-    G -->|Não| I[Corrigir e Revalidar]
-    I --> F
+"Code is law. Expand until
+silence becomes structure."
+────────────────────────────────────────
 ```
+ █████ █         
+██╔═══██╗       
+██║ █ ██║  
+██ █  ██║      
+╚██████╔╝   
+█ ╚═══╝     
 
----
-
-## 📊 Métricas de Sucesso
-
-- ✅ 3 identidades migradas
-- ⏳ 0 identidades validadas
-- ⏳ 0 novas identidades adicionadas
-- ✅ 1 Project criado
-- ✅ 1 Issue criada
-- ✅ 1 Workflow configurado
-
----
-
-**Última atualização:** 2025-12-03
-
+```

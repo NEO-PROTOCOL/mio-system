@@ -1,65 +1,78 @@
-# 🔑 interface: miniapp-telegram
+<!-- markdownlint-disable MD003 MD007 MD011 MD013 MD022 MD023 MD025 MD029 MD032 MD033 MD034 -->
 
-## 📋 Metadados
+```text
+========================================
+   NΞØ PROTOCOL · MINIAPP TELEGRAM
+========================================
+```
 
-| Campo | Valor |
-|-------|-------|
-| **Nome** | `miniapp-telegram` |
-| **Tipo** | interface |
-| **Plataforma** | neo-protocol |
-| **Função** | Telegram Mini App |
-| **Criada em** | 2026-01-30 |
-| **Status** | 🟡 Em Desenvolvimento |
+Interface móvel unificada para o ecossistema NΞØ via Telegram MiniApp.
 
----
+> **Version:** v1.0.0
+> **Status:** 🟡 Em Desenvolvimento
+> **Stack:** Vue.js 3 / TON Connect
 
-## 🔐 Detalhes Técnicos
+────────────────────────────────────────
 
-### Stack
-- **Frontend:** Vue.js 3.4.0
-- **Web3 TON:** @ton/core, TON Connect
-- **Web3 EVM:** ethers, Web3Modal
-- **State:** Pinia
-- **Deploy:** Vercel
+## 🎯 What is MiniApp Telegram?
 
-### Arquitetura
-- **Camada:** 5 - Interação & Apps (NEØ Protocol)
-- **Local:** `/Users/nettomello/CODIGOS/GAMES/smart-ui-mobile/`
-- **Project:** `/Users/nettomello/CODIGOS/neo-smart-token/` (parent)
+A interface móvel soberana que permite a emissão e gestão de ativos $NEOFLW diretamente via dispositivos móveis.
 
-### Permissões
-- ✅ **Read:** Token balances, Jetton metadata
-- ✅ **Write:** Create tokens (Factory UI), Telegram Cloud Storage
-- ✅ **Execute:** Deploy Jettons (TON), Deploy ERC20 (Base/Polygon)
+```text
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃ CORE CAPABILITIES
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃
+┃ 💎 Jetton Factory
+┃    └─ TON deployment wizard
+┃
+┃ 💳 Multi-chain UI
+┃    └─ Support for TON + Base/EVM
+┃
+┃ 📱 Native Feel
+┃    └─ Integrated with Telegram UI
+┃
+┃ 🌩️ Cloud Sync
+┃    └─ Telegram Cloud Storage drafts
+┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
-### Funcionalidades
-- Token Factory UI (step-by-step wizard)
-- Jetton deployment (TON)
-- ERC20 deployment (Base, Polygon)
-- Share certificate generator
-- Cloud storage (drafts)
+────────────────────────────────────────
 
----
+## 📂 Architecture
+
+- **Repo:** https://github.com/neo-smart-factory/smart-ui-mobile
+- **Local:** `/Users/nettomello/neomello/neo-smart-factory/docs/smart-ui-mobile/`
+
+────────────────────────────────────────
 
 ## ✅ Verificação
 
 ```bash
 # Dev mode
-cd /Users/nettomello/CODIGOS/GAMES/smart-ui-mobile
 pnpm dev
 
 # Build
 pnpm build
-
-# Deploy
-vercel deploy --prod
 ```
 
----
+────────────────────────────────────────
 
-## 📝 Notas
+▓▓▓ NΞØ MELLØ
+────────────────────────────────────────
+Core Architect · NΞØ Protocol
+neo@neoprotocol.space
 
-- Integra com Smart Factory
-- Multi-chain (TON + EVM)
-- Overlap com ceo-escalavel-miniapp (requer merge)
-- Auditoria completa em AUDIT_MINIAPPS.md
+"Code is law. Expand until
+silence becomes structure."
+────────────────────────────────────────
+```
+ █████ █         
+██╔═══██╗       
+██║ █ ██║  
+██ █  ██║      
+╚██████╔╝   
+█ ╚═══╝     
+
+```
