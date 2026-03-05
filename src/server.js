@@ -71,7 +71,12 @@ app.post('/api/webhook/nexus', (req, res) => {
         });
     }
 
-    console.log(`[MIO] Webhook received: ${event}`);
+    // Sanitize user-controlled event before logging to avoid log injection.
+    const sanitizedEvent = event
+        .replace(/[\r\n\t]/g, ' ')
+        .replace(/[^\x20-\x7E]/g, '')
+        .slice(0, 160);
+    console.log(`[MIO] Webhook received: ${sanitizedEvent}`);
 
     res.status(200).json({
         status: 'accepted',
