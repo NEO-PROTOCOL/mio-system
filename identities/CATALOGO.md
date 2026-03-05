@@ -10,7 +10,7 @@
 
 > **Version:** v2.0.0
 > **Status:** 🟢 All Systems Updated
-> **Source:** [ecosystem.json](../../neobot/config/ecosystem.json)
+> **Source:** [ecosystem.json](../../neobot-orchestrator/config/ecosystem.json)
 
 ────────────────────────────────────────
 

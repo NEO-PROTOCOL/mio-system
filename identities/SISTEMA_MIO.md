@@ -41,7 +41,7 @@ Gerenciar de forma sistemática todas as identidades, chaves e tokens no ecossis
 
 O Sistema MIO é regido pelo registro unificado no Neobot.
 
-- **Source of Truth (Operativa):** `neobot/config/ecosystem.json`
+- **Source of Truth (Operativa):** `neobot-orchestrator/config/ecosystem.json`
 - **Source of Truth (Documental):** `mio-system/identities/`
 - **Identity Registry:** `src/neo/identity/registry.ts` (Neobot)
 

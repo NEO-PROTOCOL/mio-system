@@ -49,7 +49,7 @@ Sempre realize operações via scripts ou orquestrador.
 ./scripts/list-identities.sh
 
 # Sincronizar com Ecosystem
-# Ver: ../neobot/config/ecosystem.json
+# Ver: ../neobot-orchestrator/config/ecosystem.json
 ```
 
 ────────────────────────────────────────

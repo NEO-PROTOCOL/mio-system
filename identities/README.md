@@ -55,7 +55,7 @@ identities/
 
 ## 🛠 Usage & Governance
 
-O Sistema MIO é a fonte de verdade documental, sincronizada com o `neobot/config/ecosystem.json`.
+O Sistema MIO é a fonte de verdade documental, sincronizada com o `neobot-orchestrator/config/ecosystem.json`.
 
 1. **Registrar nova identidade:**
    ```bash
