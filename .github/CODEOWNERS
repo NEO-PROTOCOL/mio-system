@@ -1,2 +1,5 @@
-# Identity layer must stay tightly controlled
-* @nettomello
+# Gate 1 baseline ownership (temporary until team matrix is finalized)
+/src/ @neomello
+/identities/ @neomello
+/docs/ @neomello
+* @neomello
