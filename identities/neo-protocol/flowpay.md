@@ -16,21 +16,22 @@
 ## 🔐 Detalhes Técnicos
 
 ### Stack
-- **Framework:** Astro 5.16.6
+- **Framework:** Astro 5 (Web) + Cloudflare Workers (API)
+- **Database:** Cloudflare D1
 - **Payment:** Woovi/OpenPix (PIX API)
-- **Web3:** Web3Auth Modal, QuickNode (Base L2)
-- **Deploy:** Netlify Functions
+- **Web3:** Smart Factory Router / Base L2
+- **Deploy:** Cloudflare Pages (Web) / Workers (API)
 
 ### Arquitetura
-- **Camada:** Valor & Token (NEØ Protocol)
-- **Repo:** https://github.com/NEO-PROTOCOL/flowpay
-- **Local:** `/Users/nettomello/CODIGOS/flowpay/`
-- **URL:** https://flowpaypix.netlify.app
+- **Camada:** Financial Node (NEØ Stack)
+- **Repo:** https://github.com/flowpaycash/flowpay
+- **Local:** `/Users/nettomello/neomello/flowpay/`
+- **URL:** https://flowpay.cash
 
 ### Permissões
-- ✅ **Read:** PIX transactions, Wallet balances
-- ✅ **Write:** Create PIX charges, Mint tokens
-- ✅ **Execute:** PIX → $NEOFLW conversion, Webhook handlers
+- ✅ **Read:** PIX transactions, D1 Ledger
+- ✅ **Write:** FlowPay API, Mint Rewards (via Smart Core)
+- ✅ **Execute:** Webhook handlers, Payment conversion
 
 ### Funcionalidades
 - PIX Integration (100%)

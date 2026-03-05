@@ -2,58 +2,62 @@
 
 ```text
 ========================================
-   NΞØ PROTOCOL · GITHUB ACTIONS
+   NΞØ PROTOCOL · NEO TUNNEL
 ========================================
 ```
 
-Configuração de CI/CD para validação automática de identidades operacionais.
+Sovereign Dev Tunnel e Proxy seguro para exposição controlada de serviços locais (Webhooks).
 
-> **Workflow:** validate-identities.yml
-> **Trigger:** Push / Daily Schedule
-> **Status:** 🟢 Active
+> **Version:** v1.0.0
+> **Status:** 🟢 Ativo
+> **Protocol:** Secure WebSocket
 
 ────────────────────────────────────────
 
-## 🎯 Objetivo: Audit Contínuo
+## 🎯 What is NEO Tunnel?
 
-O workflow `validate-identities.yml` garante que o `mio-system` mantenha a integridade das suas identidades registradas sem intervenção manual.
+Substituto soberano para ngrok e Cloudflare Tunnels, garantindo que o trafego de desenvolvimento passe por nossa infraestrutura.
 
 ```text
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-┃ WORKFLOW STEPS
+┃ CORE CAPABILITIES
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┃
-┃ 📂 Step 1: Checkout Code
-┃    └─ Root: mio-system
+┃ 🚇 Secure Tunneling
+┃    └─ WebSocket-based local proxy
 ┃
-┃ 🛡️ Step 2: Validate Access
-┃    └─ Run scripts/validate-access.sh
+┃ ⚓ Webhook Routing
+┃    └─ neo-agent, flowpay, nexus, neobot
 ┃
-┃ 📊 Step 3: Generate Summary
-┃    └─ Post to GitHub Actions Run
+┃ 🛡️ Sovereign Auth
+┃    └─ mio-system auth integration
+┃
+┃ ⚡ High Performance
+┃    └─ Node.js + Railway
 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ────────────────────────────────────────
 
-## 🛠 Execução Manual (CLI)
+## 📂 Architecture
 
-```bash
-# Executar via GitHub CLI
-gh workflow run validate-identities.yml
-
-# Monitorar logs em tempo real
-gh run view --log
-```
+- **Repo:** https://github.com/NEO-PROTOCOL/neo-tunnel.git
+- **Local:** `/Users/nettomello/neomello/NEO-PROTOCOL/neo-tunnel/`
+- **URL:** https://tunnel.neoprotocol.space
 
 ────────────────────────────────────────
 
-## 📈 Cronogramas
+## ✅ Verificação
 
-- **Diário:** 02:00 AM (UTC)
-- **Push:** Qualquer mudança em `identities/**`.
-- **Manual:** `workflow_dispatch` ativado.
+```bash
+# Status do Servidor
+curl https://tunnel.neoprotocol.space/health
+
+# Iniciar Tunnel Local
+cd /Users/nettomello/neomello/NEO-PROTOCOL/neo-tunnel
+make tunnel-status
+```
 
 ────────────────────────────────────────
 

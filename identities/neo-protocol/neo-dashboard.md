@@ -2,58 +2,59 @@
 
 ```text
 ========================================
-   NΞØ PROTOCOL · GITHUB ACTIONS
+   NΞØ PROTOCOL · UNIFIED DASHBOARD
 ========================================
 ```
 
-Configuração de CI/CD para validação automática de identidades operacionais.
+Centro de observabilidade unificado do ecossistema NΞØ Protocol em tempo real.
 
-> **Workflow:** validate-identities.yml
-> **Trigger:** Push / Daily Schedule
-> **Status:** 🟢 Active
+> **Version:** v1.0.0
+> **Status:** 🟢 Ativo
+> **Stack:** React 19 + Next.js 15
 
 ────────────────────────────────────────
 
-## 🎯 Objetivo: Audit Contínuo
+## 🎯 What is NEO Dashboard?
 
-O workflow `validate-identities.yml` garante que o `mio-system` mantenha a integridade das suas identidades registradas sem intervenção manual.
+O centro de controle soberano que consolida logs de agentes, eventos do Nexus e saúde operacional da stack de 28+ repositórios.
 
 ```text
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-┃ WORKFLOW STEPS
+┃ CORE CAPABILITIES
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┃
-┃ 📂 Step 1: Checkout Code
-┃    └─ Root: mio-system
+┃ 📊 Stats Aggregator
+┃    └─ Collective health of all nodes
 ┃
-┃ 🛡️ Step 2: Validate Access
-┃    └─ Run scripts/validate-access.sh
+┃ 🛰️ Nexus Stream
+┃    └─ Real-time visual event flow
 ┃
-┃ 📊 Step 3: Generate Summary
-┃    └─ Post to GitHub Actions Run
+┃ 🧠 Agent Monitor
+┃    └─ Logs and LangGraph traces
+┃
+┃ 🍱 Bento Design
+┃    └─ Glassmorphism Cyberpunk UI
 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ────────────────────────────────────────
 
-## 🛠 Execução Manual (CLI)
+## 📂 Architecture
 
-```bash
-# Executar via GitHub CLI
-gh workflow run validate-identities.yml
-
-# Monitorar logs em tempo real
-gh run view --log
-```
+- **Repo:** https://github.com/NEO-PROTOCOL/neo-dashboard-deploy.git
+- **Local:** `/Users/nettomello/neomello/NEO-PROTOCOL/neo-dashboard-deploy/`
+- **URL:** https://dashboard.neoprotocol.space
 
 ────────────────────────────────────────
 
-## 📈 Cronogramas
+## ✅ Verificação
 
-- **Diário:** 02:00 AM (UTC)
-- **Push:** Qualquer mudança em `identities/**`.
-- **Manual:** `workflow_dispatch` ativado.
+```bash
+# Start Local
+cd /Users/nettomello/neomello/NEO-PROTOCOL/neo-dashboard-deploy
+pnpm dev
+```
 
 ────────────────────────────────────────
 

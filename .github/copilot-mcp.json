@@ -1,0 +1,10 @@
+{
+    "mcpServers": {
+        "railway": {
+            "url": "https://mcp.railway.app"
+        },
+        "github": {
+            "url": "https://api.githubcopilot.com/mcp/"
+        }
+    }
+}

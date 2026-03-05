@@ -1,37 +1,94 @@
-# 🔐 Sistema MIO - Modelo de Identidade Operacional
+<!-- markdownlint-disable MD003 MD007 MD011 MD013 MD022 MD023 MD025 MD029 MD032 MD033 MD034 -->
 
-Infraestrutura de coordenação entre inteligências não-humanas.
-
-Cada agente/plataforma tem identidade própria, rastreável e documentada.
-
-## 📚 Documentação
-
-- [Sistema MIO](./identities/SISTEMA_MIO.md) - Visão geral
-- [Mapa de Identidades](./identities/MAPA_MIO.md) - Painel operativo
-- [Catálogo](./identities/CATALOGO.md) - Índice completo
-- [Setup Novo Repo](./identities/SETUP_NOVO_REPO.md) - Guia de setup
-- [Ecossistema](./ecosystem.json) - Mapa mestre de todos os serviços (24 projetos, 6 orgs)
-
-## 🚀 Quick Start
-
-```bash
-# Registrar nova identidade
-./scripts/register-identity.sh {tipo} {nome} {plataforma}
-
-# Listar identidades
-./scripts/list-identities.sh
-
-# Validar acesso
-./scripts/validate-access.sh
-
-# Criar PR
-./scripts/create-pr.sh "Título" "Descrição"
+```text
+========================================
+   NΞØ PROTOCOL · MIO SYSTEM API
+========================================
 ```
 
-## 🗺️ Mapa de Identidades
+Sovereign Operation & Identity Management Layer for the NΞØ Protocol Stack.
 
-Ver [MAPA_MIO.md](./identities/MAPA_MIO.md) para visão completa do ecossistema.
+> **Version:** v2.0.0-openclaw
+> **Status:** 🟢 Integrated
+> **Identity Authority:** mio-system (Web3 Auth)
 
-## 📖 Licença
+────────────────────────────────────────
 
-MIT
+## 🎯 What is MIO System?
+
+O modelo de identidade operacional (MIO) é a infraestrutura de coordenação entre inteligências humanas e não-humanas (agentes IA), garantindo que cada nó do ecossistema tenha uma identidade única, rastreável e soberana.
+
+```text
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃ CORE COMPONENTS
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃
+┃ 🔑 [Registros](./identities/CATALOGO.md)
+┃    └─ Complete Identity Index
+┃
+┃ 🗺️ [Dashboard](./identities/MAPA_MIO.md)
+┃    └─ Real-time Ops Visualization
+┃
+┃ 🛡️ [Security](./identities/SISTEMA_MIO.md)
+┃    └─ Web3 Signature Protocol
+┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+────────────────────────────────────────
+
+## 🚀 Quick Start (Operations)
+
+Sempre realize operações via scripts ou orquestrador.
+
+```bash
+# Registrar nova identidade soberana
+./scripts/register-identity.sh {tipo} {nome} {plataforma}
+
+# Listar identidades ativas
+./scripts/list-identities.sh
+
+# Sincronizar com Ecosystem
+# Ver: ../neobot-orchestrator/config/ecosystem.json
+```
+
+────────────────────────────────────────
+
+## 📂 Repository Structure
+
+```text
+mio-system/
+├── identities/         # Identity Documentation & Registry
+├── src/                # Identity Server (Express/Web3)
+├── scripts/            # Ops Automation
+├── ecosystem.json      # Master Service Map (Mirror)
+└── package.json        # Dependencies (Express, Ethers)
+```
+
+────────────────────────────────────────
+
+## ⚖️ Authorship & Sovereignty
+
+- **Architecture:** NΞØ MELLØ
+- **IP:** All architecture designs and code are protected IP of NΞØ MELLØ.
+- **Law:** Code is law. Expand until silence becomes structure.
+
+────────────────────────────────────────
+
+▓▓▓ NΞØ MELLØ
+────────────────────────────────────────
+Core Architect · NΞØ Protocol
+neo@neoprotocol.space
+
+"Code is law. Expand until
+silence becomes structure."
+────────────────────────────────────────
+```
+ █████ █         
+██╔═══██╗       
+██║ █ ██║  
+██ █  ██║      
+╚██████╔╝   
+█ ╚═══╝     
+
+```

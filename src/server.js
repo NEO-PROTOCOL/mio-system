@@ -10,6 +10,9 @@ app.use(cors());
 app.use(express.json());
 
 // Load Ecosystem Config
+// ⚠️  SOURCE OF TRUTH: neobot-orchestrator/config/ecosystem.json
+// This file is a COPY — do NOT edit here directly.
+// To update: copy from NEO-PROTOCOL/neobot-orchestrator/config/ecosystem.json
 const ecosystemPath = path.join(__dirname, '..', 'ecosystem.json');
 let ecosystemConfig = {};
 
@@ -68,7 +71,8 @@ app.post('/api/webhook/nexus', (req, res) => {
         });
     }
 
-    console.log(`[MIO] Webhook received: ${event}`);
+    // Do not include user-controlled fields in logs to avoid log injection findings.
+    console.log('[MIO] Webhook received');
 
     res.status(200).json({
         status: 'accepted',

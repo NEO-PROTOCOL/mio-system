@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(# Busca mais específica: valores reais de tokens/keys \\(padrões que indicam dado real, não texto descritivo\\) grep -rn \"\"railwayProjectId\\\\|absolutePath\\\\|/Users/nettomello\\\\|CODIGOS\\\\|0a6c292a\\\\|railway\\\\.app\\\\|up\\\\.railway\\\\|vercel\\\\.app\\\\|railway\\\\.internal\"\" /Users/nettomello/neomello/NEO-PROTOCOL/mio-system --include=\"\"*.json\"\" --include=\"\"*.md\"\" --include=\"\"*.sh\"\")",
+      "Bash(git push:*)"
+    ]
+  }
+}

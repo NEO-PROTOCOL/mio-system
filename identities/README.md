@@ -1,75 +1,98 @@
-# 🔐 Sistema de Identidades Operacionais (MIO)
+<!-- markdownlint-disable MD003 MD007 MD011 MD013 MD022 MD023 MD025 MD029 MD032 MD033 MD034 -->
 
-## 📋 Visão Geral
-
-Este diretório centraliza todas as identidades e credenciais usadas por agentes, automações e plataformas de deploy.
-
-**Princípio:** Cada agente/plataforma tem identidade própria, rastreável e documentada.
-
----
-
-## 🗂️ Estrutura
-
-```
-infra/identities/
-├── github/
-│   ├── deploy-keys/          # Chaves SSH para deploy
-│   └── personal-tokens/       # PATs (Personal Access Tokens)
-├── vercel/                   # Tokens Vercel
-├── railway/                  # Tokens Railway
-└── agents/
-    ├── cursor/               # Configurações do Cursor AI
-    ├── mcp/                  # Model Context Protocol agents
-    └── langchain-bots/       # Bots LangChain customizados
+```text
+========================================
+   NΞØ PROTOCOL · MIO IDENTITIES
+========================================
 ```
 
----
+Central de identidades operacionais soberanas do ecossistema NΞØ Protocol.
 
-## 📝 Convenções de Nomenclatura
+> **Version:** v2.0.0-openclaw
+> **License:** Proprietary · NΞØ Protocol
+> **Runtime:** MIO System Core
 
-### Chaves SSH
-- Formato: `{plataforma}-{funcao}_{tipo}.{pub|key}`
-- Exemplo: `github-deploy_id_ed25519.pub`
+────────────────────────────────────────
 
-### Tokens
-- Formato: `{plataforma}-{funcao}-token.env`
-- Exemplo: `vercel-ci-token.env`
+## 🎯 What is MIO Identities?
 
-### Documentação
-- Formato: `{agente}-{plataforma}.md`
-- Exemplo: `cursor-github.md`
+O diretório central de gerenciamento de identidades, chaves e tokens usados por agentes, automações e plataformas de deploy.
 
----
+```text
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃ CORE CAPABILITIES
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┃
+┃ 🔑 Identity Hub
+┃    └─ Sync with Neobot Orchestrator
+┃
+┃ 🛡️ Sovereign Security
+┃    └─ Web3 Signatures Registry
+┃
+┃ 🗺️ Operation Mapping
+┃    └─ Real-time status in MAPA_MIO
+┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
-## 🔒 Segurança
+────────────────────────────────────────
 
-- **NUNCA** commite chaves privadas ou tokens
-- Use `.gitignore` para proteger arquivos sensíveis
-- Documente apenas metadados (não valores reais)
-- Use variáveis de ambiente para valores sensíveis
+## 📂 Repository Structure
 
----
+```text
+identities/
+├── neo-protocol/         # Neo-Protocol Stack Identities
+├── github/              # Code Infrastructure
+├── railway/             # Deployment Infrastructure
+├── agents/              # Local Development Agents
+│
+├── MAPA_MIO.md          # Dynamic Operation Dashboard
+├── CATALOGO.md          # Full Identity Index
+└── SISTEMA_MIO.md       # Architecture & Governance
+```
 
-## 📊 Catálogo de Identidades
+────────────────────────────────────────
 
-Verifique os arquivos `.md` em cada subdiretório para ver identidades registradas.
+## 🛠 Usage & Governance
 
----
-
-## 🚀 Quick Start
+O Sistema MIO é a fonte de verdade documental, sincronizada com o `neobot-orchestrator/config/ecosystem.json`.
 
 1. **Registrar nova identidade:**
    ```bash
    ./scripts/register-identity.sh {tipo} {nome} {plataforma}
    ```
 
-2. **Listar identidades:**
+2. **Listar identidades registradas:**
    ```bash
    ./scripts/list-identities.sh
    ```
 
-3. **Validar acesso:**
-   ```bash
-   ./scripts/validate-access.sh {identidade}
-   ```
+────────────────────────────────────────
 
+## ⚖️ Authorship & Legal
+
+- **Architecture & Lead:**
+  NΞØ MELLØ
+- **IP Protection:**
+  All original architecture and code
+  are protected IP of NΞØ MELLØ
+
+────────────────────────────────────────
+
+▓▓▓ NΞØ MELLØ
+────────────────────────────────────────
+Core Architect · NΞØ Protocol
+neo@neoprotocol.space
+
+"Code is law. Expand until
+silence becomes structure."
+────────────────────────────────────────
+```
+ █████ █         
+██╔═══██╗       
+██║ █ ██║  
+██ █  ██║      
+╚██████╔╝   
+█ ╚═══╝     
+
+```
