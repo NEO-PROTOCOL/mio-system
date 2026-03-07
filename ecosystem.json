@@ -25,7 +25,7 @@
         "identity": {
             "primary": "mio-core",
             "publicKey": "src/neo/identity/",
-            "note": "9 identidades mio-system residem em src/neo/identity/registry.ts"
+            "note": "10 identidades mio-system residem em src/neo/identity/registry.ts"
         },
         "hosting": {
             "platform": "Local / Railway (Production)",
