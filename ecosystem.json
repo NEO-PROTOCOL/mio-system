@@ -40,16 +40,17 @@
     "id": "neo-protocol-hub",
     "org": "NEO Protocol",
     "name": "NEO Protocol Hub",
-    "description": "Hub organizacional do NEO Protocol. Centraliza governanca tecnica, mapa do ecossistema e integracao entre nos.",
-    "localPath": "..",
-    "repository": "https://github.com/NEO-PROTOCOL",
-    "role": "Organization Hub / Governance Node",
+    "description": "Camada canonica transversal do ecossistema. Centraliza governanca tecnica, manifests, lineage, schemas e reconciliacao operacional.",
+    "localPath": "../neobot-orchestrator",
+    "repository": "https://github.com/NEO-PROTOCOL/neobot-orchestrator.git",
+    "role": "Canonical Context Hub / Governance Node",
     "artifactGovernance": {
-      "blueprintPath": "../STORACHA_MCP_BLUEPRINT.md",
-      "artifactIndexPath": "../ops/artifact-index.json",
-      "artifactIndexSchemaPath": "../ops/schemas/artifact-index.schema.json",
-      "manifestSchemaPath": "../ops/schemas/manifest.schema.json",
-      "manifestsRoot": "../manifests"
+      "blueprintPath": "../neobot-orchestrator/docs/STORACHA_MCP_BLUEPRINT.md",
+      "artifactIndexPath": "../neobot-orchestrator/ops/artifact-index.json",
+      "artifactIndexSchemaPath": "../neobot-orchestrator/ops/schemas/artifact-index.schema.json",
+      "manifestSchemaPath": "../neobot-orchestrator/ops/schemas/manifest.schema.json",
+      "manifestsRoot": "../neobot-orchestrator/manifests",
+      "adaptersRoot": "../neobot-orchestrator/adapters"
     },
     "hosting": {
       "platform": "GitHub Organization / Distributed",
@@ -63,7 +64,7 @@
     "name": "NEO MCP Server (Storacha)",
     "description": "Runtime MCP operacional para Storacha. Executa persistencia e recuperacao de artefatos via upload, retrieve e identity e suporta transportes stdio, sse e rest.",
     "localPath": "../neo-mcp-server",
-    "repository": "https://github.com/storacha/mcp-storage-server.git",
+    "repository": "https://github.com/NEO-PROTOCOL/neo-mcp-server.git",
     "role": "MCP Storage Runtime / Storacha Adapter",
     "mcpRuntime": {
       "provider": "Storacha",
@@ -467,13 +468,13 @@
     "org": "NEO-FlowOFF",
     "name": "NEO Mello ENS Webapp",
     "description": "Webapp estatico pessoal de NEØ MELLØ. Publica artefatos publicos para ENS, IPFS, IPNS e Storacha e emite manifestos reconciliados para o protocolo.",
-    "localPath": "../../NEO-FlowOFF/neo-mello-eth",
+    "localPath": "../neo-mello-eth",
     "repository": "https://github.com/NEO-PROTOCOL/neo-mello-eth.git",
     "role": "Public Artifact Publisher / ENS-IPFS Surface",
     "artifactPublication": {
       "artifactClass": "public_build",
-      "manifestPath": "../manifests/neo-mello-eth/latest.json",
-      "artifactIndexPath": "../ops/artifact-index.json"
+      "manifestPath": "../neobot-orchestrator/manifests/neo-mello-eth/latest.json",
+      "artifactIndexPath": "../neobot-orchestrator/ops/artifact-index.json"
     },
     "serviceEndpoints": {
       "ens": "https://neomello.eth.limo/",
