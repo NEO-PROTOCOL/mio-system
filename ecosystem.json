@@ -8,13 +8,13 @@
         "name": "Neobot — Node Warrior / Orchestrator",
         "description": "Node Warrior: Agente central do NEO Protocol. Orquestrador soberano, arquiteto e executor operacional do ecossistema.",
         "localPath": ".",
-        "repository": "https://github.com/NEO-PROTOCOL/neobot.git",
+        "repository": "https://github.com/NEO-PROTOCOL/neobot-orchestrator.git",
         "role": "Orchestrator",
         "localUrl": "http://localhost:19000",
         "webhookUrl": {
             "local": "http://localhost:19000/api/webhook/nexus",
             "internal": "http://neobot.railway.internal/api/webhook/nexus",
-            "production": "https://architect.neoprotocol.space/api/webhook/nexus",
+            "production": "https://orchestrator.neoprotocol.space/api/webhook/nexus",
             "dev": "https://dev.neoprotocol.space/api/webhook/nexus"
         },
         "nexusEvents": [
@@ -29,10 +29,10 @@
         },
         "hosting": {
             "platform": "Local / Railway (Production)",
-            "productionUrl": "https://architect.neoprotocol.space",
+            "productionUrl": "https://orchestrator.neoprotocol.space",
             "activeUrl": "http://neobot.railway.internal",
-            "railwayUrl": "https://aryn3v88.up.railway.app",
-            "targetCustomDomain": "architect.neoprotocol.space",
+            "railwayUrl": "https://cytiqdz5.up.railway.app",
+            "targetCustomDomain": "orchestrator.neoprotocol.space",
             "adminEmail": "neo@neoprotocol.space"
         }
     },
@@ -53,9 +53,9 @@
       "adaptersRoot": "../neobot-orchestrator/adapters"
     },
     "hosting": {
-      "platform": "GitHub Organization / Distributed",
+      "platform": "Repository / Distributed Governance",
       "adminEmail": "neo@neoprotocol.space",
-      "targetCustomDomain": "neoprotocol.space"
+      "note": "Sem runtime HTTP proprio. Funciona como camada canonica dentro do neobot-orchestrator."
     }
   },
   {
@@ -194,12 +194,9 @@
         "repository": "https://github.com/neo-smart-factory",
         "role": "Organization Hub / Metadata Node",
         "hosting": {
-            "platform": "Railway",
-            "productionUrl": "https://nsfactory-metadata.up.railway.app",
-            "railwayUrl": "https://7o9m2kh2.up.railway.app",
-            "internalUrl": "http://smart-factory.railway.internal",
+            "platform": "Repository / Organization Hub",
             "adminEmail": "factory@neoprotocol.space",
-            "targetCustomDomain": "factory.neoprotocol.space"
+            "note": "Sem runtime HTTP publico atribuido no momento. Se surgir superficie publica, deve sair de nsfactory.xyz e nao de neoprotocol.space."
         },
         "workspaceScope": "hub-root"
     },
@@ -250,7 +247,10 @@
         "repository": "https://github.com/neo-smart-factory/smart-ui",
         "role": "Interface / PWA",
         "hosting": {
-            "platform": "N/A (Library / PWA)",
+            "platform": "Vercel (nodevercel/smart-ui-dashboard)",
+            "productionUrl": "https://www.nsfactory.xyz/",
+            "activeUrl": "https://www.nsfactory.xyz/",
+            "targetCustomDomain": "www.nsfactory.xyz",
             "adminEmail": "neo@neoprotocol.space"
         }
     },
@@ -264,10 +264,10 @@
         "role": "Landing Page / Traffic",
         "hosting": {
             "platform": "Vercel (nodevercel/smart-ui-landing)",
-            "productionUrl": "https://landing.neoprotocol.space",
-            "activeUrl": "https://landing-jet-seven.vercel.app/",
+            "productionUrl": "https://landing-nsfactory.vercel.app/",
+            "activeUrl": "https://landing-nsfactory.vercel.app/",
             "adminEmail": "neo@neoprotocol.space",
-            "targetCustomDomain": "landing.neoprotocol.space"
+            "note": "Subdominio futuro, se existir, deve sair de nsfactory.xyz e nao de neoprotocol.space."
         }
     },
     {
@@ -279,11 +279,9 @@
         "repository": "https://github.com/neo-smart-factory/docs",
         "role": "Documentation",
         "hosting": {
-            "platform": "Vercel / IPFS",
-            "productionUrl": "https://docs.neoprotocol.space",
-            "activeUrl": "https://smart-ui-delta.vercel.app",
+            "platform": "Documentation / Unassigned",
             "adminEmail": "neo@neoprotocol.space",
-            "targetCustomDomain": "docs.neoprotocol.space"
+            "note": "Sem superficie publica dedicada no momento. Se docs ganharem dominio proprio, ele deve sair de nsfactory.xyz e nao de neoprotocol.space."
         },
         "workspaceScope": "docs-repo-mirror"
     },
@@ -310,10 +308,10 @@
         "role": "Interface / Mobile / MiniApp",
         "hosting": {
             "platform": "Vercel (nodevercel/smart-ui-mobile)",
-            "productionUrl": "https://mobile.neoprotocol.space",
+            "productionUrl": "https://miniapp-smartfactory.vercel.app",
             "activeUrl": "https://miniapp-smartfactory.vercel.app",
             "adminEmail": "neo@neoprotocol.space",
-            "targetCustomDomain": "mobile.neoprotocol.space"
+            "note": "Subdominio futuro, se existir, deve sair de nsfactory.xyz e nao de neoprotocol.space."
         }
     },
     {
