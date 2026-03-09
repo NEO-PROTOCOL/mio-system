@@ -36,6 +36,48 @@
             "adminEmail": "neo@neoprotocol.space"
         }
     },
+  {
+    "id": "neo-protocol-hub",
+    "org": "NEO Protocol",
+    "name": "NEO Protocol Hub",
+    "description": "Camada canonica transversal do ecossistema. Centraliza governanca tecnica, manifests, lineage, schemas e reconciliacao operacional.",
+    "localPath": "../neobot-orchestrator",
+    "repository": "https://github.com/NEO-PROTOCOL/neobot-orchestrator.git",
+    "role": "Canonical Context Hub / Governance Node",
+    "artifactGovernance": {
+      "blueprintPath": "../neobot-orchestrator/docs/STORACHA_MCP_BLUEPRINT.md",
+      "artifactIndexPath": "../neobot-orchestrator/ops/artifact-index.json",
+      "artifactIndexSchemaPath": "../neobot-orchestrator/ops/schemas/artifact-index.schema.json",
+      "manifestSchemaPath": "../neobot-orchestrator/ops/schemas/manifest.schema.json",
+      "manifestsRoot": "../neobot-orchestrator/manifests",
+      "adaptersRoot": "../neobot-orchestrator/adapters"
+    },
+    "hosting": {
+      "platform": "GitHub Organization / Distributed",
+      "adminEmail": "neo@neoprotocol.space",
+      "targetCustomDomain": "neoprotocol.space"
+    }
+  },
+  {
+    "id": "neo-mcp-server",
+    "org": "NEO Protocol",
+    "name": "NEO MCP Server (Storacha)",
+    "description": "Runtime MCP operacional para Storacha. Executa persistencia e recuperacao de artefatos via upload, retrieve e identity e suporta transportes stdio, sse e rest.",
+    "localPath": "../neo-mcp-server",
+    "repository": "https://github.com/NEO-PROTOCOL/neo-mcp-server.git",
+    "role": "MCP Storage Runtime / Storacha Adapter",
+    "mcpRuntime": {
+      "provider": "Storacha",
+      "tools": ["upload", "retrieve", "identity"],
+      "transports": ["stdio", "sse", "rest"],
+      "requiredEnv": ["PRIVATE_KEY", "DELEGATION", "MCP_TRANSPORT_MODE"]
+    },
+    "hosting": {
+      "platform": "Local / MCP Runtime",
+      "adminEmail": "neo@neoprotocol.space",
+      "note": "Comeca em stdio para validacao local. REST sobe depois que artifact-index e manifests estiverem operacionais."
+    }
+  },
     {
         "id": "neo-protocol-hub",
         "org": "NEO Protocol",
@@ -421,22 +463,47 @@
             "targetCustomDomain": "pro.flowoff.xyz"
         }
     },
-    {
-        "id": "ceo-escalavel-miniapp",
-        "org": "NEO-FlowOFF",
-        "name": "CEO Escalável MiniApp",
+  {
+    "id": "ceo-escalavel-miniapp",
+    "org": "NEO-FlowOFF",
+    "name": "CEO Escalável MiniApp",
         "description": "MiniApp de IA para gestão e escala (CEO Escalável)",
         "localPath": "../../NEO-FlowOFF/ceo-escalavel-miniapp",
         "repository": "https://github.com/NEO-FlowOFF/ceo-escalavel-miniapp",
         "role": "Interface / MiniApp",
-        "hosting": {
-            "platform": "Vercel (nodevercel/agentflow)",
-            "productionUrl": "https://agentflow.vercel.app",
-            "adminEmail": "neo@neoprotocol.space"
-        }
+    "hosting": {
+      "platform": "Vercel (nodevercel/agentflow)",
+      "productionUrl": "https://agentflow.vercel.app",
+      "adminEmail": "neo@neoprotocol.space"
+    }
+  },
+  {
+    "id": "neo-mello-eth",
+    "org": "NEO-FlowOFF",
+    "name": "NEO Mello ENS Webapp",
+    "description": "Webapp estatico pessoal de NEØ MELLØ. Publica artefatos publicos para ENS, IPFS, IPNS e Storacha e emite manifestos reconciliados para o protocolo.",
+    "localPath": "../neo-mello-eth",
+    "repository": "https://github.com/NEO-PROTOCOL/neo-mello-eth.git",
+    "role": "Public Artifact Publisher / ENS-IPFS Surface",
+    "artifactPublication": {
+      "artifactClass": "public_build",
+      "manifestPath": "../neobot-orchestrator/manifests/neo-mello-eth/latest.json",
+      "artifactIndexPath": "../neobot-orchestrator/ops/artifact-index.json"
     },
-    {
-        "id": "wod-x-pro",
+    "serviceEndpoints": {
+      "ens": "https://neomello.eth.limo/",
+      "ipns": "https://dweb.link/ipns/k51qzi5uqu5dk51imny6v5ilu68f5z2kb1igt1nu607530agro7wb1gwv9kqd6",
+      "storacha": "https://storacha.link/ipfs/bafybeicd6d3mvtmjx2k5zhgr66c73ylsd3qudqfnr2ey6i3kozwwgk7y2e"
+    },
+    "hosting": {
+      "platform": "ENS / IPFS / Storacha / Static Hosts",
+      "productionUrl": "https://neomello.eth.limo/",
+      "adminEmail": "neo@neoprotocol.space",
+      "targetCustomDomain": "neomello.eth"
+    }
+  },
+  {
+    "id": "wod-x-pro",
         "org": "WOD Game",
         "name": "WOD [X] PRO (App)",
         "description": "Plataforma Fitness Gamificada - Aplicativo Front-end",
