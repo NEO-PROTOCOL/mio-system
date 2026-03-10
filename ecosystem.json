@@ -414,9 +414,9 @@
         "role": "Landing Page",
         "hosting": {
             "platform": "Vercel",
-            "productionUrl": "https://www.flowoff.xyz",
+            "productionUrl": "https://www.neoflowoff.agency",
             "adminEmail": "neo@neoprotocol.space",
-            "targetCustomDomain": "www.flowoff.xyz"
+            "targetCustomDomain": "www.neoflowoff.agency"
         }
     },
     {
@@ -430,7 +430,7 @@
         "hosting": {
             "platform": "Vercel",
             "adminEmail": "neo@neoprotocol.space",
-            "targetCustomDomain": "flowoff.xyz"
+            "targetCustomDomain": "neoflowoff.agency"
         }
     },
     {
@@ -444,7 +444,7 @@
         "hosting": {
             "platform": "Vercel",
             "adminEmail": "neo@neoprotocol.space",
-            "targetCustomDomain": "pro.flowoff.xyz"
+            "targetCustomDomain": "pro.neoflowoff.agency"
         }
     },
   {
