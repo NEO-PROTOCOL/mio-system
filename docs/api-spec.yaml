@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: MIO System API
+  version: 1.0.0
+  description: Operational Identity & Configuration Layer for NEO Protocol
+  contact:
+    name: NEO Protocol
+    email: neo@neoprotocol.space
+
+servers:
+  - url: http://localhost:8080
+    description: Local development
+
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Service is healthy
+  
+  /api/v1/ecosystem:
+    get:
+      summary: Get ecosystem configuration
+      responses:
+        '200':
+          description: Ecosystem configuration
+
+  /api/v1/identities:
+    get:
+      summary: Get identity registry info
+      responses:
+        '200':
+          description: Identity registry information
+
+  /api/webhook/nexus:
+    post:
+      summary: Nexus webhook endpoint
+      responses:
+        '200':
+          description: Webhook accepted
