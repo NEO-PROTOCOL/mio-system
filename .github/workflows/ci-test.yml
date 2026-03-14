@@ -13,6 +13,9 @@ on:
       - 'src/**'
       - 'package.json'
 
+permissions:
+  contents: read
+
 jobs:
   test-and-lint:
     runs-on: ubuntu-latest
