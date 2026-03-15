@@ -1,5 +1,8 @@
 name: Validar Identidades MIO
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '0 2 * * *'  # Diariamente às 2h
