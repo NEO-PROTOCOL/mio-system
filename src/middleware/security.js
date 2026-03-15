@@ -92,7 +92,22 @@ function verifyWebhookSignature(secret) {
         .update(payload)
         .digest('hex');
 
-      if (signature !== expectedSignature) {
+      let signatureBuffer;
+      let expectedSignatureBuffer;
+      try {
+        signatureBuffer = Buffer.from(signature, 'hex');
+        expectedSignatureBuffer = Buffer.from(expectedSignature, 'hex');
+      } catch {
+        return res.status(401).json({
+          error: 'Unauthorized',
+          message: 'Invalid webhook signature'
+        });
+      }
+
+      if (
+        signatureBuffer.length !== expectedSignatureBuffer.length ||
+        !crypto.timingSafeEqual(signatureBuffer, expectedSignatureBuffer)
+      ) {
         return res.status(401).json({
           error: 'Unauthorized',
           message: 'Invalid webhook signature'
