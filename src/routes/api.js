@@ -43,6 +43,19 @@ router.get('/identities', asyncHandler(async (req, res) => {
  * Useful for manual cache invalidation
  */
 router.post('/ecosystem/reload', asyncHandler(async (req, res) => {
+  const adminToken = process.env.ADMIN_TOKEN;
+
+  // Require a valid admin token to trigger a reload
+  if (adminToken) {
+    const providedToken = req.header('x-admin-token');
+    if (providedToken !== adminToken) {
+      return res.status(403).json({ error: 'Forbidden' });
+    }
+  } else if (process.env.NODE_ENV === 'production') {
+    // In production, do not allow unauthenticated reloads if no admin token is configured
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+
   const ecosystem = reloadEcosystem();
   
   res.json({
