@@ -24,6 +24,9 @@ const config = getConfig();
 // Create Express app
 const app = express();
 
+// Trust first proxy (e.g., when behind Railway/Heroku/nginx load balancer)
+app.set('trust proxy', 1);
+
 // ===== Security & Middleware =====
 app.use(configureHelmet());
 app.use(configureRateLimit());
