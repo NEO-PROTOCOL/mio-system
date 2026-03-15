@@ -81,7 +81,12 @@ function verifyWebhookSignature(secret) {
     }
 
     try {
-      const payload = JSON.stringify(req.body);
+      // Prefer the raw request body (captured by upstream middleware) for signature verification
+      // Fallback to JSON.stringify(req.body) to preserve existing behavior if no raw body is available
+      const rawBody = req.rawBody || req.bodyRaw || null;
+      const payload = rawBody != null
+        ? (Buffer.isBuffer(rawBody) ? rawBody : String(rawBody))
+        : JSON.stringify(req.body);
       const expectedSignature = crypto
         .createHmac('sha256', secret)
         .update(payload)
