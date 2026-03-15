@@ -5,8 +5,17 @@
    NΞØ PROTOCOL · MIO SYSTEM API
 ========================================
 ```
+---
 
-Sovereign Operation & Identity Management Layer for the NΞØ Protocol Stack.
+<p align="center">
+  <img src="https://img.shields.io/badge/status-active-0bf500.svg" alt="Status">
+  <img src="https://img.shields.io/badge/WEB3-Auth-blue.svg" alt="Stack">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+</p>
+
+---
+
+Autonomous Operation & Identity Management Layer for the NΞØ Protocol Stack.
 
 > **Version:** v2.0.0-openclaw
 > **Status:** 🟢 Integrated
