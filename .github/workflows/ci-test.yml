@@ -7,11 +7,21 @@ on:
       - 'src/**'
       - 'package.json'
       - '.github/workflows/ci-test.yml'
+      - 'jest.config.*'
+      - 'eslint.config.*'
+      - '.eslintrc.*'
+      - '.prettierrc*'
+      - 'prettier.config.*'
   pull_request:
     branches: [ main, develop ]
     paths:
       - 'src/**'
       - 'package.json'
+      - 'jest.config.*'
+      - 'eslint.config.*'
+      - '.eslintrc.*'
+      - '.prettierrc*'
+      - 'prettier.config.*'
 
 permissions:
   contents: read
