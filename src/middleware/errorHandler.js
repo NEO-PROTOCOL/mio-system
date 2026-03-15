@@ -6,6 +6,17 @@
 const { getConfig } = require('../config/env');
 
 /**
+ * Sanitize strings for safe logging by removing control characters
+ * that could be used for log injection (e.g., newlines, carriage returns).
+ */
+function sanitizeForLog(value) {
+  if (value === null || value === undefined) {
+    return value;
+  }
+  return String(value).replace(/[\x00-\x1F\x7F]/g, ' ');
+}
+
+/**
  * Not Found (404) handler
  */
 function notFoundHandler(req, res) {
@@ -21,13 +32,17 @@ function notFoundHandler(req, res) {
  */
 function errorHandler(err, req, res, _next) {
   const config = getConfig();
+
+  const sanitizedMessage = sanitizeForLog(err && err.message);
+  const sanitizedPath = sanitizeForLog(req && req.path);
+  const sanitizedMethod = sanitizeForLog(req && req.method);
   
   // Log error (in production, this would go to a logging service)
   console.error('❌ Error:', {
-    message: err.message,
+    message: sanitizedMessage,
     stack: config.isDevelopment ? err.stack : undefined,
-    path: req.path,
-    method: req.method
+    path: sanitizedPath,
+    method: sanitizedMethod
   });
 
   // Determine status code
