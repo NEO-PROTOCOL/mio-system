@@ -6,7 +6,6 @@
 
 ```bash
 # No diretório do projeto atual
-cd /Users/nettomello/CODIGOS/bots_ia/flowcloser_adk-ts
 
 # Executar script de setup
 ./infra/identities/scripts/setup-new-repo.sh --private
@@ -16,6 +15,7 @@ cd /Users/nettomello/CODIGOS/bots_ia/flowcloser_adk-ts
 ```
 
 O script irá:
+
 1. ✅ Criar diretório `mio-system` no mesmo nível
 2. ✅ Copiar toda estrutura MIO
 3. ✅ Criar README, .gitignore, templates
@@ -96,4 +96,3 @@ graph LR
 ---
 
 **Última atualização:** 2025-12-03
-

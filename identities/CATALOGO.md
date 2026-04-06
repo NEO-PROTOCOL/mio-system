@@ -62,9 +62,7 @@
 
 ## 🔧 Infraestrutura Externa
 
-- [Deploy Key: FlowCloser](./github/deploy-keys/flowcloser-deploy.md) ✅
 - [Railway Deploy](./railway/railway-deploy.md) ✅
-- [Cursor AI - GitHub](./agents/cursor/cursor-github.md) ✅
 
 ────────────────────────────────────────
 
@@ -85,12 +83,13 @@ neo@neoprotocol.space
 "Code is law. Expand until
 silence becomes structure."
 ────────────────────────────────────────
+
 ```
- █████ █         
-██╔═══██╗       
-██║ █ ██║  
-██ █  ██║      
-╚██████╔╝   
-█ ╚═══╝     
+ █████ █
+██╔═══██╗
+██║ █ ██║
+██ █  ██║
+╚██████╔╝
+█ ╚═══╝
 
 ```
